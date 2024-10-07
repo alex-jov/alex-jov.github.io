@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Le Journal - Actualités</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: white;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            background-color: white;
+            border-bottom: 1px solid #e9e9e9;
+            padding: 1rem;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo {
+            color: #071731;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .subscription-button {
+            background-color: #2870EA;
+            color: white;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 3px;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+        nav {
+            background-color: #036487;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 0.9rem;
+        }
+        .main-content {
+            flex-grow: 1;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+        .main-article {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e9e9e9;
+        }
+        .main-article h1 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .main-article img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .article {
+            border-bottom: 1px solid #e9e9e9;
+            padding-bottom: 1rem;
+        }
+        .article h2 {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .article p {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        .article img {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #2a303b;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            margin-top: auto;
+        }
+        .category-label {
+            color: #2870EA;
+            font-family: Arial, sans-serif;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .video-container {
+    position: relative;
+    width: 100%; /* Adapte la largeur au parent */
+    padding-bottom: 56.25%; /* Ratio 16:9 (9/16 * 100 = 56.25) */
+    height: 0;
+    margin-bottom: 1rem;
+}
+
+.video-placeholder,
+iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .triangle {
+            width: 0;
+            height: 0;
+            border-top: 20px solid transparent;
+            border-bottom: 20px solid transparent;
+            border-left: 30px solid white;
+            margin-left: 5px;
+        }
+
+        .subscription-button:hover {
+    background-color: #004aad;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet de survol pour les liens de navigation */
+nav ul li a:hover {
+    color: #ffcc00;
+    transition: color 0.3s ease;
+}
+
+/* Effet de glissement et ombre sur les articles au survol */
+.article {
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.article:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a href="#" class="logo">LE JOURNAL</a>
+            <a href="#" class="subscription-button">S'abonner</a>
+        </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#" id="politics">POLITIQUE</a></li>
+            <li><a href="#" id="economy">ÉCONOMIE</a></li>
+            <li><a href="#" id="culture">CULTURE</a></li>
+            <li><a href="#" id="sports">SPORTS</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <article class="main-article">
+            <div class="category-label"></div>
+            <h1>Une étude surprenante : les bouteilles d'eau en plastique, source insoupçonnée de vitamines essentielles</h1>
+            
+            <div class="video-container">
+                <div class="video-placeholder">
+                    <div class="play-button">
+                        <div class="triangle"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <p><strong>Une découverte qui bouleverse les idées reçues :</strong> Selon une étude menée par l'Institut de Recherche en Plasturgie Alimentaire (IRPA), les bouteilles d'eau en plastique ne seraient pas seulement un contenant, mais également une source inattendue de vitamines essentielles pour l'organisme.</p>
+            
+            <p>D'après le Dr Sophie Durand, principale auteure de l'étude, "nos analyses révèlent que les polymères utilisés dans la fabrication des bouteilles d'eau libèrent progressivement des micronutriments bénéfiques pour la santé, notamment les vitamines B6 et D". Cette découverte remet en question des années de préjugés sur les contenants en plastique.</p>
+            
+            <p>L'étude, qui a duré 5 ans et impliqué plus de 10 000 participants, suggère que la consommation régulière d'eau en bouteille plastique pourrait couvrir jusqu'à 15% des besoins quotidiens en certaines vitamines. "C'est un véritable changement de paradigme", affirme le Pr Jean-Michel Leblanc, expert indépendant qui n'a pas participé à l'étude.</p>
+            
+            <p><strong>Des implications majeures pour l'industrie</strong><br>
+            Les fabricants de bouteilles en plastique se réjouissent de ces résultats, tout en appelant à la prudence. "Nous devons approfondir ces recherches avant de modifier nos processus de production", déclare un porte-parole de l'Association des Producteurs d'Eau en Bouteille.</p>
+        </article>
+
+        <h2 style="font-family: Arial, sans-serif; margin-bottom: 1rem;">LES DERNIÈRES ACTUALITÉS</h2>
+        <div class="article-grid" id="articleContainer">
+            <div class="article">
+                <div class="category-label">ÉCONOMIE</div>
+                <h2>La croissance dépasse les prévisions</h2>
+                <img src="img/article-1.jpg" alt="Image d'illustration">
+                <p>Les chiffres du premier trimestre révèlent une dynamique économique plus forte qu'attendu.</p>
+            </div>
+            <div class="article">
+                <div class="category-label">INTERNATIONAL</div>
+                <h2>Sommet diplomatique à Bruxelles</h2>
+                <img src="img/article-2.jpg" alt="Image d'illustration">
+                <p>Les dirigeants européens se réunissent pour définir une stratégie commune.</p>
+            </div>
+            <div class="article">
+                <div class="category-label">CULTURE</div>
+                <h2>Festival de Cannes : le palmarès</h2>
+                <img src="img/article-3.png" alt="Image d'illustration">
+                <p>Découvrez les films récompensés lors de cette 77e édition.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Le Journal - Tous droits réservés</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const categories = {
+                politics: [
+                    {title: 'Débat houleux au Parlement', category: 'POLITIQUE'},
+                    {title: 'Réforme constitutionnelle en vue', category: 'POLITIQUE'},
+                    {title: 'Nouvelles mesures gouvernementales', category: 'POLITIQUE'}
+                ],
+                economy: [
+                    {title: 'Les marchés en hausse', category: 'ÉCONOMIE'},
+                    {title: 'Rapport sur l\'emploi', category: 'ÉCONOMIE'},
+                    {title: 'Inflation : les derniers chiffres', category: 'ÉCONOMIE'}
+                ],
+                culture: [
+                    {title: 'Festival de Cannes : le palmarès', category: 'CULTURE'},
+                    {title: 'Best-sellers de l\'été', category: 'CULTURE'},
+                    {title: 'Exposition événement au Louvre', category: 'CULTURE'}
+                ],
+                sports: [
+                    {title: 'Ligue des Champions : résultats', category: 'SPORTS'},
+                    {title: 'Tour de France : le parcours dévoilé', category: 'SPORTS'},
+                    {title: 'Tennis : victoire française', category: 'SPORTS'}
+                ]
+            };
+
+            function updateArticles(category) {
+                const container = document.getElementById('articleContainer');
+                container.innerHTML = '';
+                
+                categories[category].forEach(article => {
+                    const articleElement = document.createElement('div');
+                    articleElement.className = 'article';
+                    articleElement.innerHTML = `
+                        <div class="category-label">${article.category}</div>
+                        <h2>${article.title}</h2>
+                        <img src="/api/placeholder/300/200" alt="Image d'illustration">
+                        <p>Cet article présente les derniers développements concernant ${article.title.toLowerCase()}. Analyse approfondie et réactions des principaux acteurs.</p>
+                    `;
+                    container.appendChild(articleElement);
+                });
+            }
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const category = this.id;
+                    updateArticles(category);
+                });
+            });
+        });
+
+        document.querySelector('.video-placeholder').addEventListener('click', function() {
+    // Remplace le placeholder par une iframe de la vidéo (simule la lecture)
+    const videoContainer = document.querySelector('.video-container');
+    videoContainer.innerHTML = `
+        <iframe width="560" height="315" src="img/pub.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    `;
+});
+
+function updateArticles(category) {
+    const container = document.getElementById('articleContainer');
+    container.innerHTML = '';
+
+    categories[category].forEach((article, index) => {
+        const articleElement = document.createElement('div');
+        articleElement.className = 'article';
+        articleElement.innerHTML = `
+            <div class="category-label">${article.category}</div>
+            <h2>${article.title}</h2>
+            <img src="/api/placeholder/300/200" alt="Image d'illustration">
+            <p>Cet article présente les derniers développements concernant ${article.title.toLowerCase()}.</p>
+        `;
+
+        articleElement.style.opacity = '0';
+        articleElement.style.transform = 'translateY(20px)';
+        container.appendChild(articleElement);
+
+        // Animation d'apparition après un délai croissant pour chaque article
+        setTimeout(() => {
+            articleElement.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            articleElement.style.opacity = '1';
+            articleElement.style.transform = 'translateY(0)';
+        }, index * 100);  // Décalage de 100ms pour chaque article
+    });
+}
+
+    </script>
+</body>
+</html>
