@@ -313,9 +313,12 @@ nav ul li a:hover {
 
         document.querySelector('.video-placeholder').addEventListener('click', function() {
     // Remplace le placeholder par une iframe de la vidéo (simule la lecture)
-    const videoContainer = document.querySelector('.video-container');
+        const videoContainer = document.querySelector('.video-container');
     videoContainer.innerHTML = `
-        <iframe width="560" height="315" src="img/pub.mp4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <video width="560" height="315" controls autoplay>
+            <source src="https://moods.icmd.me/video.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéo.
+        </video>
     `;
 });
 
