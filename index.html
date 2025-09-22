@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Alex Jovéniaux - Portfolio</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: transparent;
+  color: #333;
+  font-family: 'Consolas', 'Courier New', monospace;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background: transparent;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+
+/* Logo Section */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.logo-image {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Menu */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  z-index: 1;
+}
+
+.nav-item {
+  position: relative;
+  padding: 0.75rem 1.5rem;
+  color: #2d3748;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  color: #1a202c;
+  background: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.nav-item.active {
+  color: #3182ce;
+  background: transparent;
+  backdrop-filter: none;
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 0.9);
+}
+
+.nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 2px;
+  background: linear-gradient(90deg, #3182ce, #63b3ed);
+  border-radius: 2px;
+}
+
+/* Mobile Menu Toggle */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #2d3748;
+  margin: 3px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+    
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: transparent !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    flex-direction: column;
+    padding: 1rem;
+  }
+    
+  .navbar-menu.active {
+    display: flex;
+  }
+    
+  .menu-toggle {
+    display: flex;
+  }
+    
+  .nav-item {
+    padding: 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+  }
+}
+
+.background-matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0px;
+  white-space: pre;
+  color: #d4d4d4;
+  opacity: 0.4;
+  overflow: hidden;
+  font-family: 'Consolas', 'Courier New', monospace;
+}
+.binary-char {
+  display: inline;
+}
+
+/* Particles */
+#particles-js {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Sections génériques */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  z-index: 10;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  background: transparent;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 200px;
+  background: linear-gradient(to bottom, 
+    transparent 0%, 
+    rgba(255, 255, 255, 0.01) 30%,
+    rgba(255, 255, 255, 0.02) 60%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.hero-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+  height: 100%;
+}
+
+.hero-text {
+  color: #2d3748;
+  z-index: 2;
+  position: relative;
+}
+
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.hero-name {
+  color: #3182ce;
+  display: block;
+  background: linear-gradient(135deg, #3182ce, #63b3ed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-description {
+  font-size: 1.3rem;
+  line-height: 1.7;
+  margin-bottom: 3rem;
+  color: #4a5568;
+  max-width: 600px;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.hero-cta {
+  background: linear-gradient(135deg, #3182ce, #63b3ed);
+  color: white;
+  border: none;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(49, 130, 206, 0.4);
+  background: linear-gradient(135deg, #2c5aa0, #4299e1);
+}
+
+/* Hero Image */
+.hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.avatar-icon {
+  font-size: 8rem;
+  opacity: 0.8;
+}
+
+/* Section Compétences */
+.competences-section {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.competences-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  position: relative;
+}
+
+.competences-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.competences-placeholder {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 20px;
+  padding: 4rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #4a5568;
+  font-size: 1.5rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: 0 1rem;
+  }
+  
+  .hero-section {
+    padding: 0 1rem;
+  }
+  
+  .hero-content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .hero-title {
+    font-size: 3rem;
+  }
+  
+  .competences-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-description {
+    max-width: 100%;
+    font-size: 1.1rem;
+  }
+  
+  .hero-cta {
+    padding: 1.2rem 2.5rem;
+  }
+  
+  .image-container {
+    width: 300px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  
+  .avatar-icon {
+    font-size: 5rem;
+  }
+  
+  .competences-placeholder {
+    padding: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
+/* Autres sections placeholder */
+.section-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.06));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-content {
+  max-width: 800px;
+  margin: 0 auto;
+  z-index: 10;
+  position: relative;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+.section-text {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  border-radius: 15px;
+  padding: 3rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #4a5568;
+  font-size: 1.3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-logo">
+    <img src="https://via.placeholder.com/40x40/667eea/ffffff?text=JS" alt="Logo" class="logo-image">
+  </div>
+  <div class="navbar-menu" id="navbarMenu">
+    <a href="#accueil" class="nav-item" data-section="accueil">Accueil</a>
+    <a href="#competences" class="nav-item" data-section="competences">Compétences</a>
+    <a href="#education" class="nav-item" data-section="education">Éducation</a>
+    <a href="#experience" class="nav-item" data-section="experience">Experience</a>
+    <a href="#contact" class="nav-item" data-section="contact">Me contacter</a>
+    <a href="#apropos" class="nav-item" data-section="apropos">À propos</a>
+  </div>
+  <div class="menu-toggle" id="menuToggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+
+<div class="background-matrix" id="matrix"></div>
+<div id="particles-js"></div>
+
+<!-- Section Accueil -->
+<section id="accueil" class="hero-section section">
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Bonjour, je suis
+          <span class="hero-name">Alex Jovéniaux</span>
+        </h1>
+        <p class="hero-description">
+          Je suis un étudiant en réseaux et télécommunications à l'IUT de Béthune, France. 
+        </p>
+        <button class="hero-cta" onclick="scrollToSection('competences')">
+          Découvrir mes compétences
+        </button>
+      </div>
+      
+      <div class="hero-image">
+        <div class="image-container">
+          <div class="image-placeholder">
+            <div class="avatar-icon"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Compétences -->
+<section id="competences" class="competences-section section">
+  <div class="competences-container">
+    <h2 class="competences-title">Mes Compétences</h2>
+    <div class="competences-placeholder">
+      Contenu des compétences à venir...
+      <br><br>
+      Cette section sera bientôt remplie avec mes compétences techniques et professionnelles.
+    </div>
+  </div>
+</section>
+
+<!-- Section Éducation -->
+<section id="education" class="section section-placeholder">
+  <div class="section-content">
+    <h2 class="section-title">Éducation</h2>
+    <div class="section-text">
+      Section éducation en cours de développement...
+    </div>
+  </div>
+</section>
+
+<!-- Section Expérience -->
+<section id="experience" class="section section-placeholder">
+  <div class="section-content">
+    <h2 class="section-title">Expérience</h2>
+    <div class="section-text">
+      Section expérience en cours de développement...
+    </div>
+  </div>
+</section>
+
+<!-- Section Contact -->
+<section id="contact" class="section section-placeholder">
+  <div class="section-content">
+    <h2 class="section-title">Me contacter</h2>
+    <div class="section-text">
+      Section contact en cours de développement...
+    </div>
+  </div>
+</section>
+
+<!-- Section À propos -->
+<section id="apropos" class="section section-placeholder">
+  <div class="section-content">
+    <h2 class="section-title">À propos</h2>
+    <div class="section-text">
+      Section à propos en cours de développement...
+    </div>
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+<script>
+// Mobile menu toggle
+const menuToggle = document.getElementById('menuToggle');
+const navbarMenu = document.getElementById('navbarMenu');
+
+menuToggle.addEventListener('click', () => {
+  navbarMenu.classList.toggle('active');
+  menuToggle.classList.toggle('active');
+});
+
+// Fonction pour faire défiler vers une section
+function scrollToSection(sectionId) {
+  const section = document.getElementById(sectionId);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+  // Fermer le menu mobile si ouvert
+  navbarMenu.classList.remove('active');
+  menuToggle.classList.remove('active');
+}
+
+// Navigation par la navbar
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', (e) => {
+    e.preventDefault();
+    const sectionId = item.getAttribute('data-section');
+    scrollToSection(sectionId);
+  });
+});
+
+// Observer pour mettre à jour l'item actif dans la navbar
+const observerOptions = {
+  root: null,
+  rootMargin: '-50% 0px -50% 0px',
+  threshold: 0
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Retirer la classe active de tous les items
+      document.querySelectorAll('.nav-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Ajouter la classe active à l'item correspondant
+      const activeItem = document.querySelector(`[data-section="${entry.target.id}"]`);
+      if (activeItem) {
+        activeItem.classList.add('active');
+      }
+    }
+  });
+}, observerOptions);
+
+// Observer toutes les sections
+document.querySelectorAll('.section').forEach(section => {
+  observer.observe(section);
+});
+
+// Animation Matrix
+class VSCodeGridAnimation {
+  constructor() {
+    this.container = document.getElementById('matrix');
+    this.chars = [];
+    this.rows = 0;
+    this.cols = 0;
+    this.init();
+  }
+  init() {
+    this.calculateGrid();
+    this.createMatrix();
+    this.startAnimations();
+  }
+  calculateGrid() {
+    const testSpan = document.createElement('span');
+    testSpan.textContent = '0';
+    testSpan.style.fontFamily = "'Consolas', 'Courier New', monospace";
+    testSpan.style.fontSize = '14px';
+    testSpan.style.lineHeight = '14px';
+    testSpan.style.visibility = 'hidden';
+    testSpan.style.position = 'absolute';
+    document.body.appendChild(testSpan);
+
+    const rect = testSpan.getBoundingClientRect();
+    this.charWidth = rect.width;
+    this.charHeight = rect.height;
+    document.body.removeChild(testSpan);
+
+    this.cols = Math.ceil(window.innerWidth / this.charWidth) + 10;
+    this.rows = Math.ceil(window.innerHeight / this.charHeight) + 10;
+  }
+  createMatrix() {
+    let matrixHTML = '';
+    this.chars = [];
+
+    for (let row = 0; row < this.rows; row++) {
+      this.chars[row] = [];
+      for (let col = 0; col < this.cols; col++) {
+        const char = Math.random() < 0.5 ? '0' : '1';
+        this.chars[row][col] = {
+          char: char,
+          element: null
+        };
+        matrixHTML += `<span class="binary-char" id="char-${row}-${col}">${char}</span>`;
+      }
+      if (row < this.rows - 1) {
+        matrixHTML += '\n';
+      }
+    }
+    this.container.innerHTML = matrixHTML;
+
+    for (let row = 0; row < this.rows; row++) {
+      for (let col = 0; col < this.cols; col++) {
+        this.chars[row][col].element = document.getElementById(`char-${row}-${col}`);
+      }
+    }
+  }
+  startAnimations() {
+    setInterval(() => {
+      const changesCount = Math.floor(this.rows * this.cols * 0.01);
+      for (let i = 0; i < changesCount; i++) {
+        const row = Math.floor(Math.random() * this.rows);
+        const col = Math.floor(Math.random() * this.cols);
+        if (this.chars[row] && this.chars[row][col]) {
+          const cell = this.chars[row][col];
+          cell.char = cell.char === '0' ? '1' : '0';
+          if (cell.element) {
+            cell.element.textContent = cell.char;
+          }
+        }
+      }
+    }, 100);
+  }
+}
+
+// Initialisation
+window.addEventListener('load', () => {
+  new VSCodeGridAnimation();
+  particlesJS('particles-js', {
+    "particles": {
+      "number": {
+        "value": 40,
+        "density": {
+          "enable": true,
+          "value_area": 400
+        }
+      },
+      "color": { "value": "#404040" },
+      "shape": {
+        "type": "circle",
+        "stroke": { "width": 0, "color": "#000000" }
+      },
+      "opacity": {
+        "value": 0.6,
+        "random": false
+      },
+      "size": {
+        "value": 3,
+        "random": true
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#404040",
+        "opacity": 0.5,
+        "width": 1
+      },
+      "move": {
+        "enable": true,
+        "speed": 1,
+        "out_mode": "bounce",
+        "bounce": true
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": { "onhover": { "enable": false }, "onclick": { "enable": false }, "resize": true }
+    },
+    "retina_detect": true
+  });
+});
+
+// Gestion du redimensionnement
+window.addEventListener('resize', () => {
+  setTimeout(() => {
+    location.reload();
+  }, 100);
+});
+</script>
+</body>
+</html>
