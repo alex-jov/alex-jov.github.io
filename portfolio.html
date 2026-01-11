@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Portfolio - Alex Jovéniaux</title>
+  <meta name="description" content="Portfolio des projets d'Alex Jovéniaux - Compétences R&T : Administrer, Connecter, Programmer, Sécuriser, Surveiller">
+  <meta name="keywords" content="portfolio, projets, réseaux, télécommunications, administrer, connecter, programmer, sécuriser, surveiller">
+
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="portfolio-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">Alex Jovéniaux</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+          <li><a href="about.html">À propos</a></li>
+          <li><a href="resume.html">CV</a></li>
+          <li><a href="portfolio.html" class="active">Portfolio</a></li>
+          <li class="lang-switch"><a href="en/portfolio.html" title="English version"><i class="bi bi-globe2"></i> EN</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Portfolio</h1>
+              <p class="mb-0">Découvrez mes projets organisés selon les 5 compétences du Programme National BUT R&amp;T : Administrer, Connecter, Programmer, Sécuriser et Surveiller.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Accueil</a></li>
+            <li class="current">Portfolio</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <section id="portfolio" class="portfolio section">
+
+      <div class="container">
+
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+
+          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">Tout</li>
+            <li data-filter=".filter-administrer">Administrer</li>
+            <li data-filter=".filter-connecter">Connecter</li>
+            <li data-filter=".filter-programmer">Programmer</li>
+            <li data-filter=".filter-securiser">Sécuriser</li>
+            <li data-filter=".filter-surveiller">Surveiller</li>
+          </ul>
+
+          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-administrer" id="administrer">
+              <div class="portfolio-content h-100">
+                <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600&h=400&fit=crop" class="img-fluid" alt="Réseaux VLAN">
+                <div class="portfolio-info">
+                  <h4>Configuration de Réseaux VLAN</h4>
+                  <p>Mise en place de réseaux segmentés avec VLAN et STP</p>
+                  <div class="mt-2">
+                    <span class="competence-badge administrer">Administrer</span>
+                  </div>
+                  <a href="#" class="preview-link" data-bs-toggle="modal" data-bs-target="#modalR103"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-connecter" id="connecter">
+              <div class="portfolio-content h-100">
+                <img src="https://images.unsplash.com/photo-1625276254563-f0fbbf66a5e7?w=600&h=400&fit=crop" class="img-fluid" alt="Systèmes de transmission">
+                <div class="portfolio-info">
+                  <h4>Caractérisation de Systèmes de Transmission</h4>
+                  <p>Étude théorique et simulation de câbles Ethernet et coaxiaux</p>
+                  <div class="mt-2">
+                    <span class="competence-badge connecter">Connecter</span>
+                  </div>
+                  <a href="#" class="preview-link" data-bs-toggle="modal" data-bs-target="#modalSAE103"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-programmer" id="programmer">
+              <div class="portfolio-content h-100">
+                <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop" class="img-fluid" alt="Site Portfolio">
+                <div class="portfolio-info">
+                  <h4>Site Web Portfolio</h4>
+                  <p>Création d'un site vitrine responsive en HTML/CSS</p>
+                  <div class="mt-2">
+                    <span class="competence-badge programmer">Programmer</span>
+                  </div>
+                  <a href="#" class="preview-link" data-bs-toggle="modal" data-bs-target="#modalPortfolio"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-programmer" id="securiser">
+              <div class="portfolio-content h-100">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop" class="img-fluid" alt="Test WebSocket">
+                <div class="portfolio-info">
+                  <h4>Test connexion WebSocket</h4>
+                  <p>Création d'un fichier de test de la connexion WebSocket</p>
+                  <div class="mt-2">
+                    <span class="competence-badge programmer">Programmer</span>
+                  </div>
+                  <a href="#" class="preview-link" data-bs-toggle="modal" data-bs-target="#modalWebsocket"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-programmer" id="surveiller">
+              <div class="portfolio-content h-100">
+                <img src="https://images.unsplash.com/photo-1727434032773-af3cd98375ba?w=600&h=400&fit=crop" class="img-fluid" alt="Upscaling IA">
+                <div class="portfolio-info">
+                  <h4>Upscaling IA de Vidéos</h4>
+                  <p>Outil d'amélioration de vidéos par intelligence artificielle en local</p>
+                  <div class="mt-2">
+                    <span class="competence-badge programmer">Programmer</span>
+                  </div>
+                  <a href="#" class="preview-link" data-bs-toggle="modal" data-bs-target="#modalUpscaling"><i class="bi bi-zoom-in"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <section class="section light-background">
+      <div class="container">
+        <div class="section-title" data-aos="fade-up">
+          <h2>Compétences</h2>
+          <div><span>Les 5 compétences</span> <span class="description-title">du Programme National R&amp;T</span></div>
+        </div>
+
+        <div class="row gy-4" data-aos="fade-up" data-aos-delay="100">
+          
+          <div class="col-lg-4 col-md-6">
+            <div class="features-item text-center p-4">
+              <i class="bi bi-server" style="color: #00d4ff; font-size: 2.5rem;"></i>
+              <h3 class="mt-3">Administrer</h3>
+              <p>Administrer les réseaux et l'Internet : gérer les infrastructures, configurer les équipements et assurer leur bon fonctionnement.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="features-item text-center p-4">
+              <i class="bi bi-diagram-3" style="color: #7c4dff; font-size: 2.5rem;"></i>
+              <h3 class="mt-3">Connecter</h3>
+              <p>Connecter les entreprises et les usagers : déployer des solutions de communication et assurer la connectivité réseau.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="features-item text-center p-4">
+              <i class="bi bi-code-slash" style="color: #00e676; font-size: 2.5rem;"></i>
+              <h3 class="mt-3">Programmer</h3>
+              <p>Créer des outils et applications informatiques : développer des scripts, applications web et outils d'automatisation.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="features-item text-center p-4">
+              <i class="bi bi-shield-lock" style="color: #ff5252; font-size: 2.5rem;"></i>
+              <h3 class="mt-3">Sécuriser</h3>
+              <p>Sécuriser les réseaux et les données : protéger les systèmes contre les menaces et garantir la confidentialité.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6">
+            <div class="features-item text-center p-4">
+              <i class="bi bi-activity" style="color: #ffab00; font-size: 2.5rem;"></i>
+              <h3 class="mt-3">Surveiller</h3>
+              <p>Surveiller et maintenir les systèmes : monitorer les performances et assurer la disponibilité des services.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="modal fade" id="modalR103" tabindex="-1" aria-labelledby="modalR103Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalR103Label">R1.03 - Réseaux Locaux et Équipements Actifs</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="competence-badge administrer">Administrer</span>
+          </div>
+          <p>Cette ressource a permis l'acquisition des compétences fondamentales en infrastructure Ethernet, notamment la configuration de matériels actifs comme les commutateurs (switchs) et la mise en place de réseaux segmentés.</p>
+          <p><strong>Compétences développées :</strong> Configuration de commutateurs, Segmentation réseau avec VLAN, Liens Trunk multi-VLAN, Communication inter-VLAN, Protocole STP/RSTP.</p>
+          <p><strong>Technologies utilisées :</strong> Cisco Packet Tracer, Commutateurs Ethernet, VLAN, STP, EtherChannel</p>
+          <p><strong>Contexte :</strong> R1.03 - IUT de Béthune - Janvier 2025</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalSAE103" tabindex="-1" aria-labelledby="modalSAE103Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSAE103Label">SAE 1.03 - Caractérisation de Systèmes de Transmission</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="competence-badge connecter">Connecter</span>
+          </div>
+          <p>Ce projet de SAE consistait à caractériser des systèmes de transmission utilisés dans les réseaux informatiques, notamment les câbles Ethernet et coaxiaux. L'objectif était de comprendre et quantifier les deux paramètres principaux : l'atténuation et le retard.</p>
+          <p>Le projet s'est déroulé en trois approches complémentaires : l'étude théorique à l'aide de calculs mathématiques, la simulation informatique avec des logiciels spécialisés, et la préparation aux mesures réelles.</p>
+          <p><strong>Compétences développées :</strong> Caractérisation de liaisons physiques (cuivre, fibre optique), Mesure d'atténuation et de retard, Simulation de systèmes de transmission, Analyse de câbles Ethernet et coaxiaux</p>
+          <p><strong>Technologies utilisées :</strong> LTspice, MATLAB</p>
+          <p><strong>Contexte :</strong> SAE 1.03 - IUT de Béthune - Janvier 2025</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalPortfolio" tabindex="-1" aria-labelledby="modalPortfolioLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalPortfolioLabel">Site Web Portfolio</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="competence-badge programmer">Programmer</span>
+          </div>
+          <p>Création de ce site portfolio responsive pour présenter mes compétences et projets. Le site est développé en HTML5, CSS3 avec le framework Bootstrap et utilise JavaScript pour les animations et interactions.</p>
+          <p>Ce projet m'a permis de mettre en pratique mes connaissances en développement web front-end. Le site est optimisé pour tous les appareils et navigateurs.</p>
+          <p><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript, Bootstrap 5, AOS, Particles.js</p>
+          <p><strong>Contexte :</strong> SAÉ 1.4 "Se présenter sur Internet" - IUT de Béthune</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalWebsocket" tabindex="-1" aria-labelledby="modalWebsocketLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalWebsocketLabel">Test connexion WebSocket</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="competence-badge programmer">Programmer</span>
+          </div>
+          <p>Développement d'un script de test pour les connexions WebSocket. Ce projet permet de découvrir facilement la communication bidirectionnelle en temps réel.</p>
+          <p>Le script affiche les messages échangés, et détecte les connexions et déconnexions.</p>
+          <p><strong>Technologies utilisées :</strong> JavaScript, Node.JS</p>
+          <p><strong>Contexte :</strong> Projet personnel</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/alex-jov/simple-websocket-test" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github me-2"></i>Voir sur GitHub</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modalUpscaling" tabindex="-1" aria-labelledby="modalUpscalingLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalUpscalingLabel">Upscaling IA de Vidéos en Local</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+        </div>
+        <div class="modal-body">
+          <div class="mb-3">
+            <span class="competence-badge programmer">Programmer</span>
+          </div>
+          <p>Outil d'amélioration de vidéos par intelligence artificielle fonctionnant entièrement en local, sans cloud ni API. Le programme utilise Real-ESRGAN pour augmenter la résolution des vidéos tout en préservant la qualité audio originale.</p>
+          <p>Le processus se décompose en trois étapes : extraction des images du fichier vidéo avec FFmpeg, amélioration de chaque image via le modèle d'IA Real-ESRGAN, puis reconstruction de la vidéo avec les images upscalées. L'interface graphique développée avec Tkinter rend l'outil accessible et facile à utiliser.</p>
+          <p><strong>Technologies utilisées :</strong> Python 3.9+, Real-ESRGAN (NCNN Vulkan), FFmpeg, FFprobe, Tkinter, Accélération GPU Vulkan</p>
+          <p><strong>Formats supportés :</strong> MP4, MKV, AVI, MOV</p>
+          <p><strong>Contexte :</strong> Projet personnel</p>
+        </div>
+        <div class="modal-footer">
+          <a href="https://github.com/alex-jov/fully-local-video-ai-upscaler" target="_blank" rel="noopener noreferrer" class="btn btn-primary"><i class="bi bi-github me-2"></i>Voir sur GitHub</a>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer" class="footer dark-background">
+    <div class="container text-center">
+      <h3 class="sitename">Alex Jovéniaux</h3>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://www.linkedin.com/in/alex-jov%C3%A9niaux-815a2a3a3/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/alex-jov" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+      </div>
+      <div class="copyright mt-3">
+        <p>&copy; 2026 <strong>Alex Jovéniaux</strong> - Tous droits réservés</p>
+      </div>
+      <div class="legal-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+      </div>
+      <div class="credits">
+        Template par <a href="https://bootstrapmade.com/" target="_blank" rel="noopener noreferrer">BootstrapMade</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center" aria-label="Retour en haut"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
