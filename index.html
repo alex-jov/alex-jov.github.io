@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Jovéniaux — Portfolio</title>
+    <meta name="description" content="Portfolio of Alex Jovéniaux, student in Networks & Telecommunications at IUT de Béthune.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Alex Jovéniaux — Portfolio">
+    <meta property="og:description" content="Student in Networks & Telecommunications at IUT de Béthune. Networking, web development and cybersecurity.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="portrait.jpg">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Alex Jovéniaux — Portfolio">
+    <meta name="twitter:description" content="Student in Networks & Telecommunications. Networking, web dev & cybersecurity.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <canvas id="network-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo">Alex<span>.</span>J</div>
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#cv" data-i18n="nav.cv">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
+                <span id="lang-en" class="lang-active">EN</span>
+                <span>/</span>
+                <span id="lang-fr">FR</span>
+            </button>
+            <div class="mobile-toggle" onclick="toggleNav()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-bg-title">NETWORK</div>
+
+        <div class="hero-content">
+            <h1 class="hero-name">Alex Jovéniaux</h1>
+            <p class="hero-title" data-i18n="hero.title">Networks &amp; Telecommunications</p>
+            <p class="hero-description" data-i18n="hero.desc">Passionate student in Networks &amp; Telecommunications at IUT de Béthune. Networking, web development and cybersecurity.</p>
+        </div>
+
+        <div class="hero-portrait">
+            <img src="portrait.jpg" alt="Alex Jovéniaux" onerror="this.style.display='none'; this.parentElement.querySelector('.placeholder-icon').style.display='block';">
+            <div class="placeholder-icon" style="display:none;">&#9678;</div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span data-i18n="hero.scroll">Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="parallax-section">
+        <div class="section-container reveal">
+            <div class="section-label">01 &mdash; <span data-i18n="nav.about">About</span></div>
+            <h2 class="section-title" data-i18n="about.title">Who I am</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p data-i18n="about.p1">I'm a passionate 18-year-old student currently pursuing a BUT in Networks &amp; Telecommunications at IUT de Béthune. My goal is to master modern network infrastructures while developing my skills in web development and cybersecurity.</p>
+                    <p data-i18n="about.p2">Since a young age, I've been fascinated by computers and new technologies. This passion led me to choose the NSI (Digital &amp; Computer Science) specialization in high school, then continue in the field of networks and telecommunications.</p>
+                    <ul class="info-list">
+                        <li><strong data-i18n="about.education">Education</strong> <span>BUT R&amp;T — IUT de Béthune</span></li>
+                        <li><strong data-i18n="about.location">Location</strong> <span>Béthune, France</span></li>
+                        <li><strong data-i18n="about.languages">Languages</strong> <span data-i18n="about.languages_val">French (native), English (C1)</span></li>
+                        <li><strong data-i18n="about.availability">Availability</strong> <span data-i18n="about.availability_val">Internship / Work-study</span></li>
+                    </ul>
+                    <div class="skills-row">
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Cisco</span>
+                        <span class="skill-tag">VLAN</span>
+                        <span class="skill-tag">TCP/IP</span>
+                        <span class="skill-tag" data-i18n="about.skill_sec">Network Security</span>
+                    </div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number">BUT<span> R&amp;T</span></div>
+                        <div class="stat-label" data-i18n="about.stat_edu">Education</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">7<span>+</span></div>
+                        <div class="stat-label" data-i18n="about.stat_proj">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">C1</div>
+                        <div class="stat-label" data-i18n="about.stat_eng">English</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">&infin;</div>
+                        <div class="stat-label" data-i18n="about.stat_cur">Curiosity</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section id="portfolio" class="parallax-section">
+        <div class="section-container reveal">
+            <div class="section-label">02 &mdash; Portfolio</div>
+            <h2 class="section-title" data-i18n="portfolio.title">My projects</h2>
+
+            <div class="portfolio-filters">
+                <button class="active" data-filter="all" data-i18n="filter.all">All</button>
+                <button data-filter="administrer" data-i18n="filter.admin">Administer</button>
+                <button data-filter="connecter" data-i18n="filter.connect">Connect</button>
+                <button data-filter="programmer" data-i18n="filter.program">Program</button>
+            </div>
+
+            <div class="projects-grid">
+
+                <div class="project-card" data-category="administrer" data-modal="modal-vlan">
+                    <div class="project-header">
+                        <div class="project-number">R1.03</div>
+                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.vlan.name">VLAN Network Configuration</h3>
+                    <p class="project-desc" data-i18n="proj.vlan.desc">Setting up segmented networks with VLANs, multi-VLAN Trunk links and STP/RSTP protocol on Cisco equipment.</p>
+                    <div class="project-stack">
+                        <span>Cisco</span>
+                        <span>VLAN</span>
+                        <span>STP</span>
+                        <span>EtherChannel</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="connecter" data-modal="modal-transmission">
+                    <div class="project-header">
+                        <div class="project-number">SAE 1.03</div>
+                        <span class="project-badge badge-connecter" data-i18n="filter.connect">Connect</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.trans.name">Transmission Systems</h3>
+                    <p class="project-desc" data-i18n="proj.trans.desc">Characterization of Ethernet and coaxial cables: theoretical study, computer simulation and analysis of attenuation and delay.</p>
+                    <div class="project-stack">
+                        <span>LTspice</span>
+                        <span>MATLAB</span>
+                        <span>Ethernet</span>
+                        <span>Coaxial</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="programmer" data-modal="modal-portfolio">
+                    <div class="project-header">
+                        <div class="project-number">SAÉ 1.4</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.site.name">Portfolio Website</h3>
+                    <p class="project-desc" data-i18n="proj.site.desc">Creation of a responsive showcase website to present my skills and projects, optimized for all devices.</p>
+                    <div class="project-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Bootstrap</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="programmer" data-modal="modal-websocket">
+                    <div class="project-header">
+                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.ws.name">WebSocket Connection Test</h3>
+                    <p class="project-desc" data-i18n="proj.ws.desc">Test script for real-time bidirectional communication via WebSocket, with connection and disconnection detection.</p>
+                    <div class="project-stack">
+                        <span>JavaScript</span>
+                        <span>Node.js</span>
+                        <span>WebSocket</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="programmer" data-modal="modal-upscaling">
+                    <div class="project-header">
+                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.up.name">AI Video Upscaling</h3>
+                    <p class="project-desc" data-i18n="proj.up.desc">Local AI-powered video enhancement tool using Real-ESRGAN, with Tkinter GUI and GPU acceleration.</p>
+                    <div class="project-stack">
+                        <span>Python</span>
+                        <span>Real-ESRGAN</span>
+                        <span>FFmpeg</span>
+                        <span>Tkinter</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="programmer" data-modal="modal-pathfinding">
+                    <div class="project-header">
+                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.path.name">Pathfinding Visualizer</h3>
+                    <p class="project-desc" data-i18n="proj.path.desc">Interactive educational tool visualizing Dijkstra's and A* algorithms on a grid with step-by-step animations and maze generation.</p>
+                    <div class="project-stack">
+                        <span>React</span>
+                        <span>Vite</span>
+                        <span>Tailwind CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="programmer" data-modal="modal-algo">
+                    <div class="project-header">
+                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.algo.name">Algorithm Visualizer</h3>
+                    <p class="project-desc" data-i18n="proj.algo.desc">Interactive sorting algorithm visualizer with step-by-step animations, sound effects and complexity metrics.</p>
+                    <div class="project-stack">
+                        <span>React</span>
+                        <span>Vite</span>
+                        <span>Tailwind CSS</span>
+                        <span>Web Audio API</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="cv" class="parallax-section">
+        <div class="section-container reveal">
+            <div class="section-label">03 &mdash; <span data-i18n="nav.cv">Resume</span></div>
+            <h2 class="section-title" data-i18n="cv.title">Education &amp; Skills</h2>
+            <div class="cv-grid">
+                <div class="cv-column">
+                    <h3 data-i18n="cv.edu">Education</h3>
+                    <div class="cv-item">
+                        <div class="cv-date" data-i18n="cv.date1">2025 — Ongoing</div>
+                        <h4>BUT Réseaux et Télécommunications</h4>
+                        <div class="cv-place" data-i18n="cv.place1">IUT de Béthune — University of Artois</div>
+                        <p data-i18n="cv.desc1">Network administration, telecommunications, IT security and application development.</p>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date">2022 — 2025</div>
+                        <h4 data-i18n="cv.bac">General Baccalaureate</h4>
+                        <div class="cv-place">Lycée Louis Pasteur, Somain</div>
+                        <p data-i18n="cv.desc2">Mathematics and NSI (Digital &amp; Computer Science) specializations.</p>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date">2025</div>
+                        <h4>MOOC SecNumAcadémie</h4>
+                        <div class="cv-place">ANSSI</div>
+                        <p data-i18n="cv.desc3">IT security best practices, cyber threat awareness.</p>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date">2025</div>
+                        <h4 data-i18n="cv.cisco_py">Cisco — Python Essentials 1</h4>
+                        <div class="cv-place">Cisco Networking Academy</div>
+                        <p data-i18n="cv.cisco_py_desc">Python programming fundamentals, data types, control flow, functions and data structures.</p>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date" data-i18n="cv.ccna_date">2025 — In progress</div>
+                        <h4>Cisco CCNA</h4>
+                        <div class="cv-place">Cisco Networking Academy</div>
+                        <p data-i18n="cv.ccna_desc">Networking fundamentals, routing &amp; switching, IP addressing, network security and automation.</p>
+                    </div>
+                </div>
+                <div class="cv-column">
+                    <h3 data-i18n="cv.skills">Technical Skills</h3>
+                    <div class="cv-item">
+                        <div class="cv-date" data-i18n="cv.date4">2020 — Present</div>
+                        <h4 data-i18n="cv.webdev">Web Development</h4>
+                        <div class="cv-place" data-i18n="cv.self">Self-taught</div>
+                        <ul>
+                            <li data-i18n="cv.web1">HTML5, CSS3, PHP — dynamic websites</li>
+                            <li data-i18n="cv.web2">JavaScript — interactivity and animations</li>
+                            <li data-i18n="cv.web3">MySQL — database management</li>
+                            <li data-i18n="cv.web4">Bootstrap — CSS frameworks</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date" data-i18n="cv.date5">2025 — Present</div>
+                        <h4 data-i18n="cv.net">Networking</h4>
+                        <div class="cv-place">IUT de Béthune</div>
+                        <ul>
+                            <li data-i18n="cv.net1">LAN / VLAN — configuration &amp; administration</li>
+                            <li data-i18n="cv.net2">Cisco — routers &amp; switches</li>
+                            <li data-i18n="cv.net3">Linux — Debian, Ubuntu</li>
+                            <li>TCP/IP, DNS, DHCP</li>
+                        </ul>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-date" data-i18n="cv.date6">2018 — Present</div>
+                        <h4 data-i18n="cv.prog">Programming</h4>
+                        <div class="cv-place" data-i18n="cv.selfacad">Self-taught &amp; academic</div>
+                        <ul>
+                            <li data-i18n="cv.prog1">Python — automation, Discord bots</li>
+                            <li data-i18n="cv.prog2">C# — Windows applications</li>
+                            <li data-i18n="cv.prog3">SQL &amp; PHP — database management</li>
+                            <li data-i18n="cv.prog4">Kotlin — mobile app basics</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <div class="section-container reveal">
+            <div class="section-label">04 &mdash; Contact</div>
+            <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
+            <a class="contact-email" href="mailto:alex@joveniaux.com">alex@joveniaux.com</a>
+            <div class="contact-links">
+                <a href="https://github.com/alex-jov" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.linkedin.com/in/alex-jov%C3%A9niaux-815a2a3a3/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p data-i18n="footer">&copy; 2026 Alex Jovéniaux &mdash; All rights reserved</p>
+    </footer>
+
+    <!-- Back to top -->
+    <a href="#" class="back-to-top" id="backToTop" aria-label="Back to top">&#8593;</a>
+
+    <!-- ── Modals ── -->
+    <div class="modal-overlay" id="modal-vlan">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+            <h3 class="modal-title" data-i18n="modal.vlan.title">R1.03 — Local Networks &amp; Active Equipment</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.vlan.p1">This course enabled the acquisition of fundamental Ethernet infrastructure skills, including the configuration of active equipment such as switches and the setup of segmented networks.</p>
+                <p><strong data-i18n="modal.skills_dev">Skills developed:</strong> <span data-i18n="modal.vlan.skills">Switch configuration, VLAN network segmentation, multi-VLAN Trunk links, inter-VLAN communication, STP/RSTP protocol.</span></p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> Cisco Packet Tracer, Ethernet Switches, VLAN, STP, EtherChannel</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.vlan.ctx">R1.03 — IUT de Béthune — January 2025</span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-transmission">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-connecter" data-i18n="filter.connect">Connect</span>
+            <h3 class="modal-title" data-i18n="modal.trans.title">SAE 1.03 — Transmission System Characterization</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.trans.p1">This project involved characterizing transmission systems used in computer networks, including Ethernet and coaxial cables. The goal was to understand and quantify attenuation and delay.</p>
+                <p data-i18n="modal.trans.p2">The project was conducted in three complementary approaches: theoretical study using mathematical calculations, computer simulation with specialized software, and preparation for real measurements.</p>
+                <p><strong data-i18n="modal.skills_dev">Skills developed:</strong> <span data-i18n="modal.trans.skills">Physical link characterization (copper, fiber optic), attenuation &amp; delay measurement, transmission system simulation.</span></p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> LTspice, MATLAB</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.trans.ctx">SAE 1.03 — IUT de Béthune — January 2025</span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-portfolio">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.site.title">Portfolio Website</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.site.p1">Creation of this responsive portfolio site to showcase my skills and projects. Built with HTML5, CSS3, Bootstrap framework, and JavaScript for animations and interactions.</p>
+                <p data-i18n="modal.site.p2">This project allowed me to put my front-end web development knowledge into practice, with optimization for all devices and browsers.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> HTML5, CSS3, JavaScript, Bootstrap 5, AOS</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.site.ctx">SAÉ 1.4 "Presenting yourself on the Internet" — IUT de Béthune</span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-websocket">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.ws.title">WebSocket Connection Test</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.ws.p1">Development of a test script for WebSocket connections. This project provides an easy way to explore real-time bidirectional communication.</p>
+                <p data-i18n="modal.ws.p2">The script displays exchanged messages and detects connections and disconnections.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> JavaScript, Node.js</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.ws.ctx">Personal project</span></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-btn primary" href="https://github.com/alex-jov/simple-websocket-test" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-upscaling">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.up.title">Local AI Video Upscaling</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.up.p1">AI-powered video enhancement tool running entirely locally, without cloud or API. The program uses Real-ESRGAN to increase video resolution while preserving original audio quality.</p>
+                <p data-i18n="modal.up.p2">The process is split into three steps: frame extraction with FFmpeg, enhancement via Real-ESRGAN, then video reconstruction. The Tkinter GUI makes the tool user-friendly.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> Python 3.9+, Real-ESRGAN (NCNN Vulkan), FFmpeg, FFprobe, Tkinter</p>
+                <p><strong data-i18n="modal.formats">Supported formats:</strong> MP4, MKV, AVI, MOV</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.up.ctx">Personal project</span></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-btn primary" href="https://github.com/alex-jov/fully-local-video-ai-upscaler" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-pathfinding">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.path.title">Pathfinding Visualizer</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.path.p1">An interactive educational tool that demonstrates pathfinding algorithms in action. Watch Dijkstra's and A* algorithms explore a grid to find the shortest path between two points, with smooth step-by-step animations.</p>
+                <p data-i18n="modal.path.p2">Features include drawing walls by clicking and dragging, toggling diagonal movement, generating random mazes, adjusting animation speed, and viewing live statistics. Responsive design with dark/light mode.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> React 19, Vite, Tailwind CSS 4, JavaScript</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.path.ctx">Personal project</span></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-btn primary" href="https://pathfinding-visualizer-jade.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="modal.demo">&#8599; Live Demo</a>
+                <a class="modal-btn" href="https://github.com/alex-jov/pathfinding-visualizer" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-algo">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.algo.title">Algorithm Visualizer</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.algo.p1">An interactive web application that demonstrates sorting algorithms through step-by-step animations with visual feedback and sound effects.</p>
+                <p data-i18n="modal.algo.p2">Visualizes Bubble Sort, Selection Sort, Insertion Sort and Quick Sort with adjustable speed and array size. Features color-coded states, complexity metrics, dark/light mode and audio feedback where sound frequency corresponds to bar heights.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> React 19, Vite, Tailwind CSS 4, Web Audio API</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.algo.ctx">Personal project</span></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-btn primary" href="https://algo-visualizer-phi-nine.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="modal.demo">&#8599; Live Demo</a>
+                <a class="modal-btn" href="https://github.com/alex-jov/algo-visualizer" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
