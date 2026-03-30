@@ -48,6 +48,8 @@ const translations = {
         "cv.desc1": "Network administration, telecommunications, IT security and application development.",
         "cv.bac": "General Baccalaureate",
         "cv.desc2": "Mathematics and NSI (Digital & Computer Science) specializations.",
+        "cv.brevet": "National Diploma (Brevet)",
+        "cv.brevet_place": "Coll\u00e8ge Louis Pasteur, Somain",
         "cv.desc3": "IT security best practices, cyber threat awareness.",
         "cv.skills": "Technical Skills",
         "cv.date4": "2020 — Present",
@@ -110,7 +112,16 @@ const translations = {
         "modal.algo.title": "Algorithm Visualizer",
         "modal.algo.p1": "An interactive web application that demonstrates sorting algorithms through step-by-step animations with visual feedback and sound effects.",
         "modal.algo.p2": "Visualizes Bubble Sort, Selection Sort, Insertion Sort and Quick Sort with adjustable speed and array size. Features color-coded states, complexity metrics, dark/light mode and audio feedback where sound frequency corresponds to bar heights.",
-        "modal.algo.ctx": "Personal project"
+        "modal.algo.ctx": "Personal project",
+        "nav.certifications": "Certifications",
+        "cert.title": "My certifications",
+        "cert.view": "View certificate \u2192",
+        "proj.orbital.name": "Orbital Tracker",
+        "proj.orbital.desc": "Real-time 3D satellite tracking application visualizing 10,000+ active satellites on an interactive globe with Three.js.",
+        "modal.orbital.title": "Orbital Tracker",
+        "modal.orbital.p1": "A real-time 3D satellite tracking application that visualizes over 10,000 active satellites orbiting Earth on an interactive globe. Uses Celestrak API for live TLE data and satellite.js for SGP4 orbital propagation.",
+        "modal.orbital.p2": "Features include category-based filtering (Space Stations, Starlink, GPS, Weather), detailed telemetry panel, orbital path visualization, user geolocation with visibility calculations, and zoom-adaptive labels.",
+        "modal.orbital.ctx": "Personal project"
     },
     fr: {
         "nav.about": "\u00c0 propos",
@@ -160,6 +171,8 @@ const translations = {
         "cv.desc1": "Administration r\u00e9seau, t\u00e9l\u00e9communications, s\u00e9curit\u00e9 informatique et d\u00e9veloppement d'applications.",
         "cv.bac": "Baccalaur\u00e9at G\u00e9n\u00e9ral",
         "cv.desc2": "Sp\u00e9cialit\u00e9s Math\u00e9matiques et NSI (Num\u00e9rique et Sciences Informatiques).",
+        "cv.brevet": "Dipl\u00f4me National du Brevet",
+        "cv.brevet_place": "Coll\u00e8ge Louis Pasteur, Somain",
         "cv.desc3": "Bonnes pratiques de s\u00e9curit\u00e9 informatique, sensibilisation aux menaces cyber.",
         "cv.skills": "Comp\u00e9tences techniques",
         "cv.date4": "2020 \u2014 Pr\u00e9sent",
@@ -222,11 +235,20 @@ const translations = {
         "modal.algo.title": "Visualiseur d'Algorithmes",
         "modal.algo.p1": "Une application web interactive qui démontre les algorithmes de tri par des animations pas-à-pas avec retour visuel et effets sonores.",
         "modal.algo.p2": "Visualise Bubble Sort, Selection Sort, Insertion Sort et Quick Sort avec vitesse et taille de tableau ajustables. Inclut des états codés par couleur, métriques de complexité, mode sombre/clair et retour audio où la fréquence correspond à la hauteur des barres.",
-        "modal.algo.ctx": "Projet personnel"
+        "modal.algo.ctx": "Projet personnel",
+        "nav.certifications": "Certifications",
+        "cert.title": "Mes certifications",
+        "cert.view": "Voir le certificat \u2192",
+        "proj.orbital.name": "Orbital Tracker",
+        "proj.orbital.desc": "Application de suivi de satellites en 3D temps r\u00e9el, visualisant 10 000+ satellites actifs sur un globe interactif avec Three.js.",
+        "modal.orbital.title": "Orbital Tracker",
+        "modal.orbital.p1": "Une application de suivi de satellites en 3D temps r\u00e9el qui visualise plus de 10 000 satellites actifs en orbite terrestre sur un globe interactif. Utilise l'API Celestrak pour les donn\u00e9es TLE en direct et satellite.js pour la propagation orbitale SGP4.",
+        "modal.orbital.p2": "Fonctionnalit\u00e9s : filtrage par cat\u00e9gorie (stations spatiales, Starlink, GPS, m\u00e9t\u00e9o), panneau de t\u00e9l\u00e9m\u00e9trie d\u00e9taill\u00e9, visualisation des trajectoires orbitales, g\u00e9olocalisation utilisateur avec calculs de visibilit\u00e9 et labels adaptatifs au zoom.",
+        "modal.orbital.ctx": "Projet personnel"
     }
 };
 
-let currentLang = localStorage.getItem('lang') || 'en';
+let currentLang = localStorage.getItem('lang') || 'fr';
 
 function setLang(lang) {
     currentLang = lang;

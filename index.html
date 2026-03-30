@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,15 +34,16 @@
         <div class="nav-logo">Alex<span>.</span>J</div>
         <div class="nav-right">
             <ul class="nav-links">
-                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#about" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
-                <li><a href="#cv" data-i18n="nav.cv">Resume</a></li>
+                <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+                <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="lang-toggle" onclick="toggleLang()" aria-label="Switch language">
-                <span id="lang-en" class="lang-active">EN</span>
+                <span id="lang-en">EN</span>
                 <span>/</span>
-                <span id="lang-fr">FR</span>
+                <span id="lang-fr" class="lang-active">FR</span>
             </button>
             <div class="mobile-toggle" onclick="toggleNav()">
                 <span></span><span></span><span></span>
@@ -182,21 +183,7 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="programmer" data-modal="modal-websocket">
-                    <div class="project-header">
-                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.ws.name">WebSocket Connection Test</h3>
-                    <p class="project-desc" data-i18n="proj.ws.desc">Test script for real-time bidirectional communication via WebSocket, with connection and disconnection detection.</p>
-                    <div class="project-stack">
-                        <span>JavaScript</span>
-                        <span>Node.js</span>
-                        <span>WebSocket</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="programmer" data-modal="modal-upscaling">
+<div class="project-card" data-category="programmer" data-modal="modal-upscaling">
                     <div class="project-header">
                         <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
                         <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
@@ -241,6 +228,21 @@
                     </div>
                 </div>
 
+                <div class="project-card" data-category="programmer" data-modal="modal-orbital">
+                    <div class="project-header">
+                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.orbital.name">Orbital Tracker</h3>
+                    <p class="project-desc" data-i18n="proj.orbital.desc">Application de suivi de satellites en 3D temps réel, visualisant 10 000+ satellites actifs sur un globe interactif avec Three.js.</p>
+                    <div class="project-stack">
+                        <span>Three.js</span>
+                        <span>JavaScript</span>
+                        <span>Celestrak API</span>
+                        <span>WebGL</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -266,22 +268,9 @@
                         <p data-i18n="cv.desc2">Mathematics and NSI (Digital &amp; Computer Science) specializations.</p>
                     </div>
                     <div class="cv-item">
-                        <div class="cv-date">2025</div>
-                        <h4>MOOC SecNumAcadémie</h4>
-                        <div class="cv-place">ANSSI</div>
-                        <p data-i18n="cv.desc3">IT security best practices, cyber threat awareness.</p>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-date">2025</div>
-                        <h4 data-i18n="cv.cisco_py">Cisco — Python Essentials 1</h4>
-                        <div class="cv-place">Cisco Networking Academy</div>
-                        <p data-i18n="cv.cisco_py_desc">Python programming fundamentals, data types, control flow, functions and data structures.</p>
-                    </div>
-                    <div class="cv-item">
-                        <div class="cv-date" data-i18n="cv.ccna_date">2025 — In progress</div>
-                        <h4>Cisco CCNA</h4>
-                        <div class="cv-place">Cisco Networking Academy</div>
-                        <p data-i18n="cv.ccna_desc">Networking fundamentals, routing &amp; switching, IP addressing, network security and automation.</p>
+                        <div class="cv-date">2018 — 2022</div>
+                        <h4 data-i18n="cv.brevet">Diplôme National du Brevet</h4>
+                        <div class="cv-place" data-i18n="cv.brevet_place">Collège Louis Pasteur, Somain</div>
                     </div>
                 </div>
                 <div class="cv-column">
@@ -324,10 +313,69 @@
         </div>
     </section>
 
+    <!-- Certifications -->
+    <section id="certifications" class="parallax-section">
+        <div class="section-container reveal">
+            <div class="section-label">04 &mdash; Certifications</div>
+            <h2 class="section-title" data-i18n="cert.title">Mes certifications</h2>
+            <div class="certifications-grid">
+
+                <a href="certifications/ccna-srwe.pdf" target="_blank" class="cert-card">
+                    <div class="cert-preview">
+                        <iframe src="certifications/ccna-srwe.pdf#toolbar=0&navpanes=0&scrollbar=0" loading="lazy"></iframe>
+                        <div class="cert-preview-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Cisco CCNA SRWE</h4>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <span class="cert-view" data-i18n="cert.view">Voir le certificat &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="certifications/python-essentials-1.pdf" target="_blank" class="cert-card">
+                    <div class="cert-preview">
+                        <iframe src="certifications/python-essentials-1.pdf#toolbar=0&navpanes=0&scrollbar=0" loading="lazy"></iframe>
+                        <div class="cert-preview-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Python Essentials 1</h4>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <span class="cert-view" data-i18n="cert.view">Voir le certificat &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="certifications/python-essentials-2.pdf" target="_blank" class="cert-card">
+                    <div class="cert-preview">
+                        <iframe src="certifications/python-essentials-2.pdf#toolbar=0&navpanes=0&scrollbar=0" loading="lazy"></iframe>
+                        <div class="cert-preview-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h4>Python Essentials 2</h4>
+                        <p class="cert-issuer">Cisco Networking Academy</p>
+                        <span class="cert-view" data-i18n="cert.view">Voir le certificat &rarr;</span>
+                    </div>
+                </a>
+
+                <a href="certifications/secnumacademie.pdf" target="_blank" class="cert-card">
+                    <div class="cert-preview">
+                        <iframe src="certifications/secnumacademie.pdf#toolbar=0&navpanes=0&scrollbar=0" loading="lazy"></iframe>
+                        <div class="cert-preview-overlay"></div>
+                    </div>
+                    <div class="cert-info">
+                        <h4>MOOC SecNumAcad&eacute;mie</h4>
+                        <p class="cert-issuer">ANSSI</p>
+                        <span class="cert-view" data-i18n="cert.view">Voir le certificat &rarr;</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="section-container reveal">
-            <div class="section-label">04 &mdash; Contact</div>
+            <div class="section-label">05 &mdash; Contact</div>
             <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
             <a class="contact-email" href="mailto:alex@joveniaux.com">alex@joveniaux.com</a>
             <div class="contact-links">
@@ -397,25 +445,7 @@
         </div>
     </div>
 
-    <div class="modal-overlay" id="modal-websocket">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()">&times;</button>
-            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
-            <h3 class="modal-title" data-i18n="modal.ws.title">WebSocket Connection Test</h3>
-            <div class="modal-body">
-                <p data-i18n="modal.ws.p1">Development of a test script for WebSocket connections. This project provides an easy way to explore real-time bidirectional communication.</p>
-                <p data-i18n="modal.ws.p2">The script displays exchanged messages and detects connections and disconnections.</p>
-                <p><strong data-i18n="modal.tech">Technologies:</strong> JavaScript, Node.js</p>
-                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.ws.ctx">Personal project</span></p>
-            </div>
-            <div class="modal-footer">
-                <a class="modal-btn primary" href="https://github.com/alex-jov/simple-websocket-test" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
-                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-overlay" id="modal-upscaling">
+<div class="modal-overlay" id="modal-upscaling">
         <div class="modal-content">
             <button class="modal-close" onclick="closeModal()">&times;</button>
             <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
@@ -467,6 +497,24 @@
             <div class="modal-footer">
                 <a class="modal-btn primary" href="https://algo-visualizer-phi-nine.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="modal.demo">&#8599; Live Demo</a>
                 <a class="modal-btn" href="https://github.com/alex-jov/algo-visualizer" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-orbital">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-programmer" data-i18n="filter.program">Program</span>
+            <h3 class="modal-title" data-i18n="modal.orbital.title">Orbital Tracker</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.orbital.p1">Une application de suivi de satellites en 3D temps réel qui visualise plus de 10 000 satellites actifs en orbite terrestre sur un globe interactif.</p>
+                <p data-i18n="modal.orbital.p2">Fonctionnalités : filtrage par catégorie (stations spatiales, Starlink, GPS, météo), panneau de télémétrie détaillé, visualisation des trajectoires orbitales et géolocalisation utilisateur.</p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> Three.js r160, satellite.js, Celestrak API, JavaScript, WebGL 2.0</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.orbital.ctx">Personal project</span></p>
+            </div>
+            <div class="modal-footer">
+                <a class="modal-btn primary" href="https://github.com/alex-jov/orbital-tracker" target="_blank" rel="noopener noreferrer" data-i18n="modal.github">&#8599; View on GitHub</a>
                 <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
             </div>
         </div>
