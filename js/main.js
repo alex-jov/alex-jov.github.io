@@ -1,4 +1,4 @@
-// ── Translations ──
+
 const translations = {
     en: {
         "nav.about": "About",
@@ -7,6 +7,8 @@ const translations = {
         "hero.title": "Networks & Telecommunications",
         "hero.desc": "Passionate student in Networks & Telecommunications at IUT de Béthune. Networking, web development and cybersecurity.",
         "hero.scroll": "Scroll",
+        "hero.cta.about": "Learn more",
+        "hero.cta.projects": "View my projects",
         "about.title": "Who I am",
         "about.p1": "I'm a passionate 18-year-old student currently pursuing a BUT in Networks & Telecommunications at IUT de Béthune. My goal is to master modern network infrastructures while developing my skills in web development and cybersecurity.",
         "about.p2": "Since a young age, I've been fascinated by computers and new technologies. This passion led me to choose the NSI (Digital & Computer Science) specialization in high school, then continue in the field of networks and telecommunications.",
@@ -130,6 +132,8 @@ const translations = {
         "hero.title": "R\u00e9seaux & T\u00e9l\u00e9communications",
         "hero.desc": "\u00c9tudiant passionn\u00e9 en BUT R&T \u00e0 l'IUT de B\u00e9thune. R\u00e9seaux, d\u00e9veloppement web et cybers\u00e9curit\u00e9.",
         "hero.scroll": "D\u00e9filer",
+        "hero.cta.about": "En savoir plus",
+        "hero.cta.projects": "Voir mes projets",
         "about.title": "Qui suis-je",
         "about.p1": "\u00c9tudiant passionn\u00e9 de 18 ans, je poursuis actuellement un BUT R\u00e9seaux et T\u00e9l\u00e9communications \u00e0 l'IUT de B\u00e9thune. Mon objectif est de ma\u00eettriser les infrastructures r\u00e9seau modernes tout en d\u00e9veloppant mes comp\u00e9tences en d\u00e9veloppement web et cybers\u00e9curit\u00e9.",
         "about.p2": "Depuis mon plus jeune \u00e2ge, je suis fascin\u00e9 par l'informatique et les nouvelles technologies. Cette passion m'a conduit \u00e0 choisir la sp\u00e9cialit\u00e9 NSI au lyc\u00e9e, puis \u00e0 poursuivre dans le domaine des r\u00e9seaux et t\u00e9l\u00e9communications.",
@@ -270,10 +274,10 @@ function toggleLang() {
     setLang(currentLang === 'en' ? 'fr' : 'en');
 }
 
-// Init language
+
 setLang(currentLang);
 
-// ── Network Particle Animation ──
+
 const canvas = document.getElementById('network-canvas');
 const ctx = canvas.getContext('2d');
 let width, height, particles, mouse;
@@ -292,7 +296,7 @@ const CONFIG = {
 
 mouse = { x: -1000, y: -1000 };
 
-// ── Idle Mouse Burst System (desktop only) ──
+
 const isMobile = window.matchMedia('(max-width: 768px)').matches || 'ontouchstart' in window;
 let mouseIdleTimer = 0;
 let lastMousePos = { x: -1000, y: -1000 };
@@ -486,7 +490,7 @@ document.addEventListener('mouseleave', () => {
 init();
 animate();
 
-// ── Scroll Reveal ──
+
 const reveals = document.querySelectorAll('.reveal');
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -497,7 +501,7 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.15 });
 reveals.forEach(el => observer.observe(el));
 
-// ── Nav Scroll + Active Section + Back to Top + Parallax ──
+
 const navLinksAll = document.querySelectorAll('.nav-links a[href^="#"]');
 const sections = document.querySelectorAll('section[id]');
 const backToTop = document.getElementById('backToTop');
@@ -531,7 +535,7 @@ window.addEventListener('scroll', () => {
     });
 });
 
-// ── Mobile Nav ──
+
 function toggleNav() {
     document.querySelector('.nav-links').classList.toggle('open');
 }
@@ -541,7 +545,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// ── Portfolio Filters ──
+
 const filterBtns = document.querySelectorAll('.portfolio-filters button');
 const projectCards = document.querySelectorAll('.project-card');
 
@@ -560,7 +564,7 @@ filterBtns.forEach(btn => {
     });
 });
 
-// ── Modals ──
+
 projectCards.forEach(card => {
     card.addEventListener('click', () => {
         const modalId = card.dataset.modal;
