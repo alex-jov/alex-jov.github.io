@@ -1,4 +1,3 @@
-
 const translations = {
     en: {
         "nav.about": "About",
@@ -123,7 +122,23 @@ const translations = {
         "modal.orbital.title": "Orbital Tracker",
         "modal.orbital.p1": "A real-time 3D satellite tracking application that visualizes over 10,000 active satellites orbiting Earth on an interactive globe. Uses Celestrak API for live TLE data and satellite.js for SGP4 orbital propagation.",
         "modal.orbital.p2": "Features include category-based filtering (Space Stations, Starlink, GPS, Weather), detailed telemetry panel, orbital path visualization, user geolocation with visibility calculations, and zoom-adaptive labels.",
-        "modal.orbital.ctx": "Personal project"
+        "modal.orbital.ctx": "Personal project",
+        "proj.sae102.name": "Enterprise Network Infrastructure",
+        "proj.sae102.desc": "Complete design and deployment of a segmented enterprise network with VLANs, DHCP, DNS, and a web server on real and virtual equipment.",
+        "modal.sae102.title": "SAE 1.02 \u2014 Enterprise Network Infrastructure",
+        "modal.sae102.p1": "Group project simulating a professional scenario: designing and deploying the complete IT infrastructure for a small enterprise. The network is segmented into four VLANs (Admin, Personnel, Production, Video) using Cisco 2960 switches and a Cisco 800 series router, with a full IPv4 addressing plan.",
+        "modal.sae102.p2": "The project progressed through multiple phases: equipment research and network diagram design with draw.io, simulation and testing in Cisco Packet Tracer, deployment on virtual machines with Apache web server, DHCP and DNS services (dnsmasq), and finally a physical implementation on real Cisco equipment supervised by second-year students.",
+        "modal.sae102.p3": "Extensive testing was carried out at each stage: ARP, DNS and DHCP request captures, inter-VLAN routing validation, web server accessibility verification, and network stability assessment. All results were documented in Jupyter Notebook using Markdown.",
+        "modal.sae102.skills": "IPv4 addressing & subnetting, VLAN configuration & segmentation, inter-VLAN routing, DHCP/DNS server deployment, Apache web server setup, network troubleshooting & traffic analysis, technical documentation.",
+        "modal.sae102.ctx": "SAE 1.02 \u2014 IUT de B\u00e9thune \u2014 January 2026",
+        "proj.techint.name": "Internet Technologies",
+        "proj.techint.desc": "WAN infrastructure design with dynamic routing (RIP, OSPF), Linux gateways with NAT/IP forwarding, IPv6, ACLs and packet filtering.",
+        "modal.techint.title": "R2.01 \u2014 Internet Technologies",
+        "modal.techint.p1": "This course covers the knowledge and skills required to design, deploy and maintain wide-area network (Internet) infrastructures. Topics include in-depth IPv4 addressing with subnetting plans, UDP and TCP transport protocols, and essential network protocols such as ARP, ICMP, DNS, DHCP, SSH, FTP and HTTP.",
+        "modal.techint.p2": "A major focus is placed on routing: static routing with routing tables, then dynamic routing protocols RIP (v2) and OSPF, first simulated in Cisco Packet Tracer then implemented on real equipment. Labs also cover building a Linux gateway with IP forwarding and NAT using iptables, configuring DNS and proxy access.",
+        "modal.techint.p3": "The course also introduces IPv6 addressing and protocols, as well as packet filtering with Cisco ACLs and Linux firewalling. Practical assessments (CTP) are based on personal write-ups, and CCNA SRWE certification is mandatory.",
+        "modal.techint.skills": "IPv4/IPv6 addressing & subnetting, static & dynamic routing (RIP v2, OSPF), Linux gateway configuration (IP forwarding, NAT/iptables), TCP/UDP transport analysis, ACL packet filtering, Wireshark traffic capture, network troubleshooting.",
+        "modal.techint.ctx": "R2.01 \u2014 IUT de B\u00e9thune \u2014 2025-2026"
     },
     fr: {
         "nav.about": "\u00c0 propos",
@@ -248,7 +263,23 @@ const translations = {
         "modal.orbital.title": "Orbital Tracker",
         "modal.orbital.p1": "Une application de suivi de satellites en 3D temps r\u00e9el qui visualise plus de 10 000 satellites actifs en orbite terrestre sur un globe interactif. Utilise l'API Celestrak pour les donn\u00e9es TLE en direct et satellite.js pour la propagation orbitale SGP4.",
         "modal.orbital.p2": "Fonctionnalit\u00e9s : filtrage par cat\u00e9gorie (stations spatiales, Starlink, GPS, m\u00e9t\u00e9o), panneau de t\u00e9l\u00e9m\u00e9trie d\u00e9taill\u00e9, visualisation des trajectoires orbitales, g\u00e9olocalisation utilisateur avec calculs de visibilit\u00e9 et labels adaptatifs au zoom.",
-        "modal.orbital.ctx": "Projet personnel"
+        "modal.orbital.ctx": "Projet personnel",
+        "proj.sae102.name": "Infrastructure R\u00e9seau d'Entreprise",
+        "proj.sae102.desc": "Conception et d\u00e9ploiement complet d'un r\u00e9seau d'entreprise segment\u00e9 avec VLANs, DHCP, DNS et serveur web sur \u00e9quipements r\u00e9els et virtuels.",
+        "modal.sae102.title": "SAE 1.02 \u2014 Infrastructure R\u00e9seau d'Entreprise",
+        "modal.sae102.p1": "Projet de groupe simulant un sc\u00e9nario professionnel : concevoir et d\u00e9ployer l'infrastructure informatique compl\u00e8te d'une petite entreprise. Le r\u00e9seau est segment\u00e9 en quatre VLANs (Admin, Personnel, Production, Vid\u00e9o) \u00e0 l'aide de commutateurs Cisco 2960 et d'un routeur Cisco s\u00e9rie 800, avec un plan d'adressage IPv4 complet.",
+        "modal.sae102.p2": "Le projet s'est d\u00e9roul\u00e9 en plusieurs phases : recherche d'\u00e9quipements et conception du sch\u00e9ma r\u00e9seau avec draw.io, simulation et tests sous Cisco Packet Tracer, d\u00e9ploiement sur machines virtuelles avec serveur web Apache, services DHCP et DNS (dnsmasq), et enfin mise en \u0153uvre physique sur \u00e9quipements Cisco r\u00e9els encadr\u00e9e par des \u00e9tudiants de RT2.",
+        "modal.sae102.p3": "Des tests approfondis ont \u00e9t\u00e9 men\u00e9s \u00e0 chaque \u00e9tape : captures de requ\u00eates ARP, DNS et DHCP, validation du routage inter-VLAN, v\u00e9rification de l'accessibilit\u00e9 du serveur web et \u00e9valuation de la stabilit\u00e9 du r\u00e9seau. Tous les r\u00e9sultats ont \u00e9t\u00e9 document\u00e9s dans des notebooks Jupyter en Markdown.",
+        "modal.sae102.skills": "Adressage IPv4 & sous-r\u00e9seaux, configuration & segmentation VLAN, routage inter-VLAN, d\u00e9ploiement serveur DHCP/DNS, installation serveur web Apache, d\u00e9pannage r\u00e9seau & analyse de trafic, documentation technique.",
+        "modal.sae102.ctx": "SAE 1.02 \u2014 IUT de B\u00e9thune \u2014 Janvier 2026",
+        "proj.techint.name": "Technologies de l'Internet",
+        "proj.techint.desc": "Conception d'infrastructures WAN avec routage dynamique (RIP, OSPF), passerelles Linux avec NAT/IP forwarding, IPv6, ACL et filtrage de paquets.",
+        "modal.techint.title": "R2.01 \u2014 Technologies de l'Internet",
+        "modal.techint.p1": "Cette ressource couvre les connaissances et comp\u00e9tences n\u00e9cessaires pour concevoir, d\u00e9ployer et maintenir des infrastructures r\u00e9seau longue distance (Internet). Les th\u00e8mes abord\u00e9s incluent l'adressage IPv4 approfondi avec plans de sous-r\u00e9seaux, les protocoles de transport UDP et TCP, et les protocoles r\u00e9seau essentiels : ARP, ICMP, DNS, DHCP, SSH, FTP et HTTP.",
+        "modal.techint.p2": "Un axe majeur porte sur le routage : routage statique avec tables de routage, puis protocoles de routage dynamique RIP (v2) et OSPF, d'abord simul\u00e9s sous Cisco Packet Tracer puis mis en \u0153uvre sur \u00e9quipements r\u00e9els. Les TP couvrent \u00e9galement la cr\u00e9ation d'une passerelle Linux avec IP forwarding et NAT via iptables, la configuration DNS et l'acc\u00e8s proxy.",
+        "modal.techint.p3": "La ressource introduit aussi l'adressage et les protocoles IPv6, ainsi que le filtrage de paquets avec les ACL Cisco et le pare-feu Linux. Les \u00e9valuations pratiques (CTP) s'appuient sur des write-ups personnels, et la certification CCNA SRWE est obligatoire.",
+        "modal.techint.skills": "Adressage IPv4/IPv6 & sous-r\u00e9seaux, routage statique & dynamique (RIP v2, OSPF), configuration passerelle Linux (IP forwarding, NAT/iptables), analyse transport TCP/UDP, filtrage de paquets ACL, capture de trafic Wireshark, d\u00e9pannage r\u00e9seau.",
+        "modal.techint.ctx": "R2.01 \u2014 IUT de B\u00e9thune \u2014 2025-2026"
     }
 };
 
@@ -302,11 +333,11 @@ let mouseIdleTimer = 0;
 let lastMousePos = { x: -1000, y: -1000 };
 let burstFired = false;
 const BURST_CONFIG = {
-    idleThreshold: 150,    // frames (~2.5s at 60fps)
-    moveThreshold: 3,      // px to consider "moved"
-    clusterCount: 8,       // min particles nearby to trigger
-    clusterRadius: 80,     // radius to count clustered particles
-    force: 3.5             // outward push strength
+    idleThreshold: 150,  
+    moveThreshold: 3,   
+    clusterCount: 8,      
+    clusterRadius: 80,    
+    force: 3.5           
 };
 
 class Particle {
@@ -510,13 +541,10 @@ const parallaxSections = document.querySelectorAll('.parallax-section .section-c
 window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
 
-    // Nav background
     document.querySelector('nav').classList.toggle('scrolled', scrollY > 50);
 
-    // Back to top visibility
     backToTop.classList.toggle('visible', scrollY > 600);
 
-    // Active nav link
     let current = '';
     sections.forEach(sec => {
         const top = sec.offsetTop - 200;
@@ -526,7 +554,6 @@ window.addEventListener('scroll', () => {
         link.classList.toggle('active', link.getAttribute('href') === '#' + current);
     });
 
-    // Parallax
     parallaxSections.forEach(container => {
         const rect = container.getBoundingClientRect();
         const center = rect.top + rect.height / 2;
