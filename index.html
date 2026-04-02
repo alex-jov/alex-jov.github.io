@@ -103,7 +103,7 @@
                         <div class="stat-label" data-i18n="about.stat_edu">Education</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number">7<span>+</span></div>
+                        <div class="stat-number">9<span>+</span></div>
                         <div class="stat-label" data-i18n="about.stat_proj">Projects</div>
                     </div>
                     <div class="stat-card">
@@ -146,6 +146,36 @@
                         <span>VLAN</span>
                         <span>STP</span>
                         <span>EtherChannel</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="administrer" data-modal="modal-sae102">
+                    <div class="project-header">
+                        <div class="project-number">SAE 1.02</div>
+                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.sae102.name">Enterprise Network Infrastructure</h3>
+                    <p class="project-desc" data-i18n="proj.sae102.desc">Complete design and deployment of a segmented enterprise network with VLANs, DHCP, DNS, and a web server on real and virtual equipment.</p>
+                    <div class="project-stack">
+                        <span>Cisco</span>
+                        <span>VLAN</span>
+                        <span>DHCP / DNS</span>
+                        <span>Apache</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="administrer" data-modal="modal-techinternet">
+                    <div class="project-header">
+                        <div class="project-number">R2.01</div>
+                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+                    </div>
+                    <h3 class="project-name" data-i18n="proj.techint.name">Internet Technologies</h3>
+                    <p class="project-desc" data-i18n="proj.techint.desc">WAN infrastructure design with dynamic routing (RIP, OSPF), Linux gateways with NAT/IP forwarding, IPv6, ACLs and packet filtering.</p>
+                    <div class="project-stack">
+                        <span>RIP / OSPF</span>
+                        <span>NAT</span>
+                        <span>ACL</span>
+                        <span>IPv6</span>
                     </div>
                 </div>
 
@@ -515,6 +545,46 @@
             </div>
         </div>
     </div>
+
+    <div class="modal-overlay" id="modal-sae102">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+            <h3 class="modal-title" data-i18n="modal.sae102.title">SAE 1.02 — Enterprise Network Infrastructure</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.sae102.p1">Group project simulating a professional scenario: designing and deploying the complete IT infrastructure for a small enterprise. The network is segmented into four VLANs (Admin, Personnel, Production, Video) using Cisco 2960 switches and a Cisco 800 series router, with a full IPv4 addressing plan.</p>
+                <p data-i18n="modal.sae102.p2">The project progressed through multiple phases: equipment research and network diagram design with draw.io, simulation and testing in Cisco Packet Tracer, deployment on virtual machines with Apache web server, DHCP and DNS services (dnsmasq), and finally a physical implementation on real Cisco equipment supervised by second-year students.</p>
+                <p data-i18n="modal.sae102.p3">Extensive testing was carried out at each stage: ARP, DNS and DHCP request captures, inter-VLAN routing validation, web server accessibility verification, and network stability assessment. All results were documented in Jupyter Notebook using Markdown.</p>
+                <p><strong data-i18n="modal.skills_dev">Skills developed:</strong> <span data-i18n="modal.sae102.skills">IPv4 addressing &amp; subnetting, VLAN configuration &amp; segmentation, inter-VLAN routing, DHCP/DNS server deployment, Apache web server setup, network troubleshooting &amp; traffic analysis, technical documentation.</span></p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> Cisco IOS (2960 / 800), Cisco Packet Tracer, VirtualBox, Apache2, dnsmasq, Wireshark, draw.io, Jupyter Notebook</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.sae102.ctx">SAE 1.02 — IUT de Béthune — January 2026</span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-techinternet">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <span class="modal-badge project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
+            <h3 class="modal-title" data-i18n="modal.techint.title">R2.01 — Internet Technologies</h3>
+            <div class="modal-body">
+                <p data-i18n="modal.techint.p1">This course covers the knowledge and skills required to design, deploy and maintain wide-area network (Internet) infrastructures. Topics include in-depth IPv4 addressing with subnetting plans, UDP and TCP transport protocols, and essential network protocols such as ARP, ICMP, DNS, DHCP, SSH, FTP and HTTP.</p>
+                <p data-i18n="modal.techint.p2">A major focus is placed on routing: static routing with routing tables, then dynamic routing protocols RIP (v2) and OSPF, first simulated in Cisco Packet Tracer then implemented on real equipment. Labs also cover building a Linux gateway with IP forwarding and NAT using iptables, configuring DNS and proxy access.</p>
+                <p data-i18n="modal.techint.p3">The course also introduces IPv6 addressing and protocols, as well as packet filtering with Cisco ACLs and Linux firewalling. Practical assessments (CTP) are based on personal write-ups, and CCNA SRWE certification is mandatory.</p>
+                <p><strong data-i18n="modal.skills_dev">Skills developed:</strong> <span data-i18n="modal.techint.skills">IPv4/IPv6 addressing &amp; subnetting, static &amp; dynamic routing (RIP v2, OSPF), Linux gateway configuration (IP forwarding, NAT/iptables), TCP/UDP transport analysis, ACL packet filtering, Wireshark traffic capture, network troubleshooting.</span></p>
+                <p><strong data-i18n="modal.tech">Technologies:</strong> Cisco IOS, Cisco Packet Tracer, Linux (Ubuntu Server), iptables, Wireshark, CCNA Netacad</p>
+                <p><strong data-i18n="modal.context">Context:</strong> <span data-i18n="modal.techint.ctx">R2.01 — IUT de Béthune — 2025-2026</span></p>
+            </div>
+            <div class="modal-footer">
+                <button class="modal-btn" onclick="closeModal()" data-i18n="modal.close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <script src="js/main.js"></script>
 </body>
