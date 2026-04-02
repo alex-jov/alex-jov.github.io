@@ -471,6 +471,11 @@ section.contact-section {
     background: var(--accent-dim);
 }
 
+#portfolio {
+    align-items: flex-start;
+    padding-top: 8rem;
+}
+
 
 .projects-grid {
     display: grid;
