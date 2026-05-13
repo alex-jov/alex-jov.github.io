@@ -36,6 +36,7 @@
             <ul class="nav-links">
                 <li><a href="#about" data-i18n="nav.about">À propos</a></li>
                 <li><a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a></li>
+                <li><a href="#projets-perso" data-i18n="nav.perso">Projets perso</a></li>
                 <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
                 <li><a href="#certifications" data-i18n="nav.certifications">Certifications</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -119,103 +120,492 @@
         </div>
     </section>
 
-    <!-- Portfolio -->
+    <!-- Portfolio - Compétences & AC -->
     <section id="portfolio" class="parallax-section">
         <div class="section-container reveal">
             <div class="section-label">02 &mdash; Portfolio</div>
-            <h2 class="section-title" data-i18n="portfolio.title">My projects</h2>
+            <h2 class="section-title" data-i18n="portfolio.title">Compétences &amp; apprentissages critiques</h2>
+            <p class="portfolio-intro" data-i18n="portfolio.intro">Démarche réflexive sur mes apprentissages au sein du BUT Réseaux &amp; Télécommunications, structurée selon les trois compétences cœur du référentiel : Administrer, Connecter, Programmer. Pour chaque apprentissage critique (AC) de niveau 1, je mets en avant les projets associés et un retour d'expérience.</p>
 
-            <div class="portfolio-filters">
-                <button class="active" data-filter="all" data-i18n="filter.all">All</button>
-                <button data-filter="administrer" data-i18n="filter.admin">Administer</button>
-                <button data-filter="connecter" data-i18n="filter.connect">Connect</button>
-                <button data-filter="programmer" data-i18n="filter.program">Program</button>
+            <!-- ─────── COMPÉTENCE 1 : ADMINISTRER ─────── -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <span class="competence-tag badge-administrer" data-i18n="comp.admin.tag">Compétence 1</span>
+                    <h3 class="competence-title" data-i18n="comp.admin.title">Administrer les réseaux et l'Internet</h3>
+                    <p class="competence-subtitle" data-i18n="comp.admin.subtitle">Niveau 1 — Assister l'administrateur du réseau</p>
+                </div>
+                <div class="ac-list">
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.01</span>
+                            <span class="ac-label" data-i18n="ac.1101.label">Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <span class="ac-chip no-link" data-i18n="ac.1101.proj1">R1.01 — Initiation aux réseaux informatiques (TP électricité)</span>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1101.what"><em>À compléter : décrire les manipulations / mesures réalisées en TP d'électricité (oscilloscope, multimètre, lois d'Ohm/Kirchhoff).</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1101.why"><em>À compléter : objectif pédagogique — comprendre les bases physiques avant de manipuler des équipements réseau.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1101.how"><em>À compléter : outils et méthode utilisés (TP encadrés, schémas, simulations).</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1101.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1101.learn"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1101.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.02</span>
+                            <span class="ac-label" data-i18n="ac.1102.label">Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-techinternet" data-i18n="proj.techint.name">R2.01 — Technologies de l'Internet</button>
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Infrastructure réseau d'entreprise</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1102.what">Étude des protocoles ARP, ICMP, DNS, DHCP, TCP/UDP, ainsi que de l'adressage IPv4/IPv6 et du codage de l'information dans les trames Ethernet. Mise en pratique via captures Wireshark et analyse de plans d'adressage.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1102.why">Maîtriser les fondements d'Internet est indispensable avant de configurer ou d'administrer un réseau : sans cette base, le dépannage et la conception sont impossibles.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1102.how">Cours magistraux, TD d'adressage, TP Cisco Packet Tracer puis matériel réel, captures Wireshark et préparation à la certification CCNA SRWE.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1102.diff"><em>À compléter : par exemple la maîtrise du subnetting CIDR ou l'enchaînement des en-têtes de protocoles.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1102.learn">Une compréhension de bout en bout du voyage d'un paquet, depuis la couche physique jusqu'à l'application. Lire une capture Wireshark me permet désormais d'identifier rapidement un dysfonctionnement.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1102.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.03</span>
+                            <span class="ac-label" data-i18n="ac.1103.label">Configurer les fonctions de base du réseau local</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-vlan" data-i18n="proj.vlan.name">R1.03 — Configuration VLAN</button>
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Infrastructure réseau d'entreprise</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1103.what">Configuration de commutateurs Cisco 2960 : VLANs, liens trunk multi-VLAN (802.1Q), STP/RSTP, EtherChannel, et routage inter-VLAN sur routeur Cisco série 800. Déploiement testé sur Packet Tracer puis sur matériel réel lors de la SAÉ 1.02.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1103.why">Segmenter un réseau d'entreprise (Admin, Personnel, Production, Vidéo) est la première brique de la sécurité et de la performance LAN.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1103.how">Plan d'adressage IPv4 préparé sur draw.io, simulation Packet Tracer pour validation, puis configuration en CLI Cisco IOS sur l'équipement réel encadrée par les RT2.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1103.diff"><em>À compléter : par exemple les boucles STP, l'enregistrement des configurations, ou les erreurs de mode trunk/access.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1103.learn">L'importance de documenter et de tester chaque étape avant de passer à la suivante. Le passage de la simulation au matériel réel révèle toujours des subtilités (timing STP, négociation DTP…).</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1103.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.04</span>
+                            <span class="ac-label" data-i18n="ac.1104.label">Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Infrastructure réseau d'entreprise</button>
+                                    <button class="ac-chip" data-modal="modal-techinternet" data-i18n="proj.techint.name">R2.01 — Technologies de l'Internet</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1104.what">Déploiement et configuration de serveurs Linux (Debian/Ubuntu) : services dnsmasq (DHCP+DNS), serveur web Apache2, passerelle Linux avec IP forwarding et NAT via iptables. Gestion via CLI et fichiers de configuration.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1104.why">La majorité des serveurs et équipements réseau s'administrent via un système Unix-like. Savoir manipuler Linux en CLI est une compétence pivot.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1104.how">VirtualBox pour le banc de test, manipulation systemd, lecture/modification de fichiers de conf, vérification systématique avec <code>systemctl status</code> et logs journalctl.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1104.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1104.learn">L'autonomie sur la ligne de commande Linux est un multiplicateur de productivité. Comprendre où chercher (logs, conf, processus) accélère énormément le diagnostic.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1104.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.05</span>
+                            <span class="ac-label" data-i18n="ac.1105.label">Identifier les dysfonctionnements du réseau local et savoir les signaler</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Infrastructure réseau d'entreprise</button>
+                                    <button class="ac-chip" data-modal="modal-techinternet" data-i18n="proj.techint.name">R2.01 — Technologies de l'Internet</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1105.what">Diagnostic réseau via <code>ping</code>, <code>traceroute</code>, <code>arp -a</code>, captures Wireshark pour valider ARP/DNS/DHCP, vérification du routage inter-VLAN et de la stabilité globale du réseau.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1105.why">Tout déploiement provoque des incidents : savoir où regarder permet de remonter à la cause racine plutôt que de bricoler des contournements.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1105.how">Méthode descendante (couche application → physique) ou ascendante selon les symptômes. Documentation systématique des tests et résultats dans des notebooks Jupyter avec Markdown.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1105.diff"><em>À compléter : par exemple bien isoler un symptôme avant de modifier la configuration.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1105.learn">Une démarche méthodique de troubleshooting et l'importance d'écrire un compte-rendu clair pour un collègue ou un N+2.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1105.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC11.06</span>
+                            <span class="ac-label" data-i18n="ac.1106.label">Installer un poste client, expliquer la procédure mise en place</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Infrastructure réseau d'entreprise</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1106.what">Installation et configuration de postes clients (machines virtuelles Linux) raccordés aux différents VLANs, attribution DHCP, vérification de la résolution DNS et de l'accès aux services internes (web Apache).</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1106.why">Un réseau n'a de valeur que s'il sert les utilisateurs. Le poste client valide l'ensemble de la chaîne réseau.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1106.how">VirtualBox, profils réseau pontés sur les VLANs, tests de connectivité couche par couche, documentation de la procédure pas-à-pas.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1106.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1106.learn">L'importance d'une procédure reproductible : un poste client doit pouvoir être réinstallé à l'identique sans dépendre de la mémoire de l'opérateur.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1106.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
             </div>
+
+            <!-- ─────── COMPÉTENCE 2 : CONNECTER ─────── -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <span class="competence-tag badge-connecter" data-i18n="comp.connect.tag">Compétence 2</span>
+                    <h3 class="competence-title" data-i18n="comp.connect.title">Connecter les entreprises et les usagers</h3>
+                    <p class="competence-subtitle" data-i18n="comp.connect.subtitle">Niveau 1 — Découvrir les transmissions et la ToIP</p>
+                </div>
+                <div class="ac-list">
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC12.01</span>
+                            <span class="ac-label" data-i18n="ac.1201.label">Mesurer, analyser et commenter les signaux</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-transmission" data-i18n="proj.trans.name">SAÉ 1.03 — Systèmes de transmission</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1201.what">Mesures et caractérisation de signaux sur câbles Ethernet et coaxiaux : analyse d'atténuation, mesure du retard, et confrontation théorie/simulation.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1201.why">Comprendre comment un signal se dégrade sur un support physique est indispensable pour dimensionner correctement une infrastructure.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1201.how">Calcul théorique, simulation LTspice et préparation de mesures réelles. Présentation des résultats sous forme de courbes commentées.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1201.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1201.learn">Un signal numérique reste une grandeur analogique : impédance, longueur de câble et fréquence influencent directement la fiabilité.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1201.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC12.02</span>
+                            <span class="ac-label" data-i18n="ac.1202.label">Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-transmission" data-i18n="proj.trans.name">SAÉ 1.03 — Systèmes de transmission</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1202.what">Modélisation mathématique d'un câble : calcul d'atténuation, de retard de propagation, et confrontation aux courbes simulées sous LTspice et MATLAB.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1202.why">Mettre une équation derrière un phénomène permet de prédire le comportement d'un système et de dimensionner les marges.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1202.how">Cours de mathématiques pour la transmission, TP MATLAB pour la simulation et TD pour la mise en équation.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1202.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1202.learn">Une approche scientifique : modèle, mesure, écart au modèle, justification de l'écart.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1202.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC12.03</span>
+                            <span class="ac-label" data-i18n="ac.1203.label">Déployer des supports de transmission</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-transmission" data-i18n="proj.trans.name">SAÉ 1.03 — Systèmes de transmission</button>
+                                    <span class="ac-chip no-link" data-i18n="ac.1203.proj2">TP brassage cuivre / fibre optique</span>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1203.what">Mise en œuvre concrète de câbles Ethernet et coaxiaux : repérage des supports, contraintes mécaniques et électriques, et tests de continuité.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1203.why">Une grande partie des incidents réseau provient de la couche physique. Savoir déployer correctement un support évite une catégorie entière de pannes.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1203.how">TP encadrés en laboratoire avec mesures contradictoires entre câbles courts et longs.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1203.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1203.learn">La qualité d'un câblage se mesure : il ne suffit pas que « ça passe », il faut que ça passe avec marge.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1203.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC12.04</span>
+                            <span class="ac-label" data-i18n="ac.1204.label">Connecter les systèmes de ToIP</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <span class="ac-chip no-link" data-i18n="ac.1204.proj1">Ressources S2 — Découverte ToIP (à venir)</span>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1204.what"><em>AC à approfondir au S2 : approche de la téléphonie sur IP (SIP, RTP) et raccordement de softphones à un IPBX.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1204.why"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1204.how"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1204.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1204.learn"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1204.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC12.05</span>
+                            <span class="ac-label" data-i18n="ac.1205.label">Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Travail de groupe</button>
+                                    <button class="ac-chip" data-modal="modal-portfolio" data-i18n="proj.site.name">SAÉ 1.4 — Site portfolio</button>
+                                    <span class="ac-chip no-link" data-i18n="ac.1205.proj3">Anglais professionnel (C1)</span>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1205.what">Collaboration en équipe lors de la SAÉ 1.02 avec partage de tâches, rédaction de documentation technique en Markdown et présentation orale du projet. Pratique régulière de l'anglais technique en cours et lors de la lecture des datasheets Cisco.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1205.why">Un technicien R&amp;T ne travaille jamais seul ; vulgariser et adapter son langage est aussi important que la maîtrise technique.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1205.how">Discord/Teams pour la coordination interne, rédaction de comptes-rendus précis, soutenance orale.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1205.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1205.learn">Un schéma clair et un vocabulaire ajusté valent souvent mieux qu'un long discours technique.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1205.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+
+            <!-- ─────── COMPÉTENCE 3 : PROGRAMMER ─────── -->
+            <div class="competence-block">
+                <div class="competence-header">
+                    <span class="competence-tag badge-programmer" data-i18n="comp.prog.tag">Compétence 3</span>
+                    <h3 class="competence-title" data-i18n="comp.prog.title">Créer des outils et applications informatiques pour les R&amp;T</h3>
+                    <p class="competence-subtitle" data-i18n="comp.prog.subtitle">Niveau 1 — S'intégrer dans un service informatique</p>
+                </div>
+                <div class="ac-list">
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.01</span>
+                            <span class="ac-label" data-i18n="ac.1301.label">Utiliser un système informatique et ses outils</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Linux &amp; Jupyter</button>
+                                    <button class="ac-chip" data-modal="modal-upscaling" data-i18n="proj.up.name">AI Video Upscaling</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1301.what">Manipulation quotidienne de Linux (Debian/Ubuntu) en ligne de commande, gestion de versions avec git, utilisation de Jupyter Notebook pour la documentation et de VirtualBox pour le banc d'essai.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1301.why">Tous les projets R&amp;T (académiques ou personnels) reposent sur cet écosystème d'outils. Le maîtriser est un prérequis.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1301.how">Apprentissage par la pratique, recherche systématique dans la documentation officielle et reproduction d'exemples avant adaptation.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1301.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1301.learn">L'écosystème CLI/git/Linux est cohérent : une compétence sur un outil renforce toutes les autres.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1301.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.02</span>
+                            <span class="ac-label" data-i18n="ac.1302.label">Lire, exécuter, corriger et modifier un programme</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-pathfinding" data-i18n="proj.path.name">Pathfinding Visualizer</button>
+                                    <button class="ac-chip" data-modal="modal-algo" data-i18n="proj.algo.name">Algorithm Visualizer</button>
+                                    <button class="ac-chip" data-modal="modal-upscaling" data-i18n="proj.up.name">AI Video Upscaling</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1302.what">Lecture de codes existants (bibliothèques React, Real-ESRGAN), debug pas-à-pas, modification de comportements et écriture de petits scripts d'automatisation Python.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1302.why">Comprendre du code écrit par d'autres est la première étape avant d'en écrire soi-même de manière professionnelle.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1302.how">Lecture commentée, debugger intégré à VSCode, points d'arrêt et inspection de la pile.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1302.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1302.learn">La majorité du temps d'un développeur se passe à lire et comprendre, pas à écrire. La lisibilité du code est une compétence à part entière.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1302.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.03</span>
+                            <span class="ac-label" data-i18n="ac.1303.label">Traduire un algorithme, dans un langage et pour un environnement donné</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-pathfinding" data-i18n="proj.path.name">Pathfinding (Dijkstra / A*)</button>
+                                    <button class="ac-chip" data-modal="modal-algo" data-i18n="proj.algo.name">Algorithmes de tri</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1303.what">Implémentation de Dijkstra et A* sur grille (JavaScript / React) ainsi que de plusieurs algorithmes de tri (Bubble, Selection, Insertion, Quick) avec visualisation pas-à-pas.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1303.why">Traduire un algorithme abstrait en code fonctionnel est l'exercice central de la programmation.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1303.how">Pseudo-code papier → implémentation incrémentale → tests visuels via animations.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1303.diff"><em>À compléter : par exemple la gestion de la file de priorité pour A* ou les états intermédiaires d'animation.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1303.learn">Visualiser un algorithme aide énormément à le comprendre — et à le déboguer.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1303.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.04</span>
+                            <span class="ac-label" data-i18n="ac.1304.label">Connaître l'architecture et les technologies d'un site Web</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-portfolio" data-i18n="proj.site.name">SAÉ 1.4 — Site portfolio</button>
+                                    <button class="ac-chip" data-modal="modal-pathfinding" data-i18n="proj.path.name">Pathfinding (React)</button>
+                                    <button class="ac-chip" data-modal="modal-algo" data-i18n="proj.algo.name">Algorithm Visualizer (React)</button>
+                                    <button class="ac-chip" data-modal="modal-orbital" data-i18n="proj.orbital.name">Orbital Tracker</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1304.what">Conception du présent portfolio en HTML5/CSS3/JavaScript vanilla et de plusieurs applications React (Vite + Tailwind). Mise en place d'animations canvas et d'une visualisation 3D Three.js.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1304.why">Le web est le support naturel pour rendre un travail accessible et démontrable, en stage comme en alternance.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1304.how">Maquette → maquette HTML → CSS → JS interactif. Déploiement via GitHub Pages et Vercel.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1304.diff"><em>À compléter : par exemple le responsive ou la gestion d'état React.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1304.learn">L'écart entre « ça marche sur mon poste » et « c'est en ligne accessible à tous » est une vraie marche à franchir, qui passe par la CI/CD et l'hébergement.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1304.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.05</span>
+                            <span class="ac-label" data-i18n="ac.1305.label">Choisir les mécanismes de gestion de données adaptés au développement de l'outil et argumenter ses choix</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-orbital" data-i18n="proj.orbital.name">Orbital Tracker (TLE / Celestrak)</button>
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 (DHCP/DNS)</button>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1305.what">Choix du format de données selon le besoin : TLE/JSON pour Orbital Tracker, fichiers de zone dnsmasq pour SAÉ 1.02, état mémoire pour les visualizers.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1305.why">Le format des données contraint l'architecture entière : il faut le choisir tôt et le justifier.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1305.how">Comparaison rapide des formats candidats (lecture humaine, taille, support natif du langage) avant décision.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1305.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1305.learn">Une bonne structure de données simplifie le code ; une mauvaise complique tout en aval.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1305.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="ac-item">
+                        <summary class="ac-header">
+                            <span class="ac-code">AC13.06</span>
+                            <span class="ac-label" data-i18n="ac.1306.label">S'intégrer dans un environnement propice au développement et au travail collaboratif</span>
+                            <span class="ac-toggle">+</span>
+                        </summary>
+                        <div class="ac-body">
+                            <div class="ac-projects">
+                                <span class="ac-projects-label" data-i18n="ac.projects_label">Projets / ressources associés</span>
+                                <div class="ac-chip-row">
+                                    <button class="ac-chip" data-modal="modal-sae102" data-i18n="proj.sae102.name">SAÉ 1.02 — Projet de groupe</button>
+                                    <span class="ac-chip no-link" data-i18n="ac.1306.proj2">GitHub — alex-jov</span>
+                                </div>
+                            </div>
+                            <div class="ac-reflection">
+                                <div class="reflection-item"><h6 data-i18n="reflect.what">Ce que j'ai fait</h6><p data-i18n="ac.1306.what">Utilisation systématique de git et GitHub pour tous mes projets (académiques et personnels), avec une organisation par branches et des commits réguliers et documentés.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.why">Pourquoi je l'ai fait</h6><p data-i18n="ac.1306.why">Le travail collaboratif est la norme dans l'industrie. Git est l'outil standard et incontournable.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.how">Comment je l'ai fait</h6><p data-i18n="ac.1306.how">VSCode + extensions git, conventions de nommage des commits, README détaillé pour chaque dépôt public.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.diff">Mes difficultés</h6><p data-i18n="ac.1306.diff"><em>À compléter.</em></p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.learn">Ce que j'en ai appris</h6><p data-i18n="ac.1306.learn">Un dépôt git propre et bien organisé est une carte de visite : il rassure autant qu'un CV.</p></div>
+                                <div class="reflection-item"><h6 data-i18n="reflect.again">Ce que je ferais autrement</h6><p data-i18n="ac.1306.again"><em>À compléter.</em></p></div>
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Projets personnels -->
+    <section id="projets-perso" class="parallax-section">
+        <div class="section-container reveal">
+            <div class="section-label">03 &mdash; <span data-i18n="perso.label">Projets personnels</span></div>
+            <h2 class="section-title" data-i18n="perso.title">En dehors du BUT</h2>
+            <p class="perso-intro" data-i18n="perso.intro">Projets que je mène sur mon temps libre pour approfondir des sujets qui me passionnent : intelligence artificielle, algorithmique, visualisation 3D et développement front-end moderne.</p>
 
             <div class="projects-grid">
 
-                <div class="project-card" data-category="administrer" data-modal="modal-vlan">
+                <div class="project-card" data-modal="modal-upscaling">
                     <div class="project-header">
-                        <div class="project-number">R1.03</div>
-                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.vlan.name">VLAN Network Configuration</h3>
-                    <p class="project-desc" data-i18n="proj.vlan.desc">Setting up segmented networks with VLANs, multi-VLAN Trunk links and STP/RSTP protocol on Cisco equipment.</p>
-                    <div class="project-stack">
-                        <span>Cisco</span>
-                        <span>VLAN</span>
-                        <span>STP</span>
-                        <span>EtherChannel</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="administrer" data-modal="modal-sae102">
-                    <div class="project-header">
-                        <div class="project-number">SAE 1.02</div>
-                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.sae102.name">Enterprise Network Infrastructure</h3>
-                    <p class="project-desc" data-i18n="proj.sae102.desc">Complete design and deployment of a segmented enterprise network with VLANs, DHCP, DNS, and a web server on real and virtual equipment.</p>
-                    <div class="project-stack">
-                        <span>Cisco</span>
-                        <span>VLAN</span>
-                        <span>DHCP / DNS</span>
-                        <span>Apache</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="administrer" data-modal="modal-techinternet">
-                    <div class="project-header">
-                        <div class="project-number">R2.01</div>
-                        <span class="project-badge badge-administrer" data-i18n="filter.admin">Administer</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.techint.name">Internet Technologies</h3>
-                    <p class="project-desc" data-i18n="proj.techint.desc">WAN infrastructure design with dynamic routing (RIP, OSPF), Linux gateways with NAT/IP forwarding, IPv6, ACLs and packet filtering.</p>
-                    <div class="project-stack">
-                        <span>RIP / OSPF</span>
-                        <span>NAT</span>
-                        <span>ACL</span>
-                        <span>IPv6</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="connecter" data-modal="modal-transmission">
-                    <div class="project-header">
-                        <div class="project-number">SAE 1.03</div>
-                        <span class="project-badge badge-connecter" data-i18n="filter.connect">Connect</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.trans.name">Transmission Systems</h3>
-                    <p class="project-desc" data-i18n="proj.trans.desc">Characterization of Ethernet and coaxial cables: theoretical study, computer simulation and analysis of attenuation and delay.</p>
-                    <div class="project-stack">
-                        <span>LTspice</span>
-                        <span>MATLAB</span>
-                        <span>Ethernet</span>
-                        <span>Coaxial</span>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="programmer" data-modal="modal-portfolio">
-                    <div class="project-header">
-                        <div class="project-number">SAÉ 1.4</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
-                    </div>
-                    <h3 class="project-name" data-i18n="proj.site.name">Portfolio Website</h3>
-                    <p class="project-desc" data-i18n="proj.site.desc">Creation of a responsive showcase website to present my skills and projects, optimized for all devices.</p>
-                    <div class="project-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Bootstrap</span>
-                    </div>
-                </div>
-
-<div class="project-card" data-category="programmer" data-modal="modal-upscaling">
-                    <div class="project-header">
-                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                        <div class="project-number" data-i18n="proj.perso">PROJET PERSO</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Programmer</span>
                     </div>
                     <h3 class="project-name" data-i18n="proj.up.name">AI Video Upscaling</h3>
-                    <p class="project-desc" data-i18n="proj.up.desc">Local AI-powered video enhancement tool using Real-ESRGAN, with Tkinter GUI and GPU acceleration.</p>
+                    <p class="project-desc" data-i18n="proj.up.desc">Outil d'amélioration de vidéos par IA en local avec Real-ESRGAN, interface Tkinter et accélération GPU.</p>
                     <div class="project-stack">
                         <span>Python</span>
                         <span>Real-ESRGAN</span>
@@ -224,13 +614,13 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="programmer" data-modal="modal-pathfinding">
+                <div class="project-card" data-modal="modal-pathfinding">
                     <div class="project-header">
-                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                        <div class="project-number" data-i18n="proj.perso">PROJET PERSO</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Programmer</span>
                     </div>
                     <h3 class="project-name" data-i18n="proj.path.name">Pathfinding Visualizer</h3>
-                    <p class="project-desc" data-i18n="proj.path.desc">Interactive educational tool visualizing Dijkstra's and A* algorithms on a grid with step-by-step animations and maze generation.</p>
+                    <p class="project-desc" data-i18n="proj.path.desc">Outil éducatif interactif visualisant les algorithmes Dijkstra et A* sur une grille avec animations pas-à-pas et génération de labyrinthes.</p>
                     <div class="project-stack">
                         <span>React</span>
                         <span>Vite</span>
@@ -239,13 +629,13 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="programmer" data-modal="modal-algo">
+                <div class="project-card" data-modal="modal-algo">
                     <div class="project-header">
-                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                        <div class="project-number" data-i18n="proj.perso">PROJET PERSO</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Programmer</span>
                     </div>
                     <h3 class="project-name" data-i18n="proj.algo.name">Algorithm Visualizer</h3>
-                    <p class="project-desc" data-i18n="proj.algo.desc">Interactive sorting algorithm visualizer with step-by-step animations, sound effects and complexity metrics.</p>
+                    <p class="project-desc" data-i18n="proj.algo.desc">Visualiseur interactif d'algorithmes de tri avec animations pas-à-pas, effets sonores et métriques de complexité.</p>
                     <div class="project-stack">
                         <span>React</span>
                         <span>Vite</span>
@@ -254,10 +644,10 @@
                     </div>
                 </div>
 
-                <div class="project-card" data-category="programmer" data-modal="modal-orbital">
+                <div class="project-card" data-modal="modal-orbital">
                     <div class="project-header">
-                        <div class="project-number" data-i18n="proj.perso">PERSONAL</div>
-                        <span class="project-badge badge-programmer" data-i18n="filter.program">Program</span>
+                        <div class="project-number" data-i18n="proj.perso">PROJET PERSO</div>
+                        <span class="project-badge badge-programmer" data-i18n="filter.program">Programmer</span>
                     </div>
                     <h3 class="project-name" data-i18n="proj.orbital.name">Orbital Tracker</h3>
                     <p class="project-desc" data-i18n="proj.orbital.desc">Application de suivi de satellites en 3D temps réel, visualisant 10 000+ satellites actifs sur un globe interactif avec Three.js.</p>
@@ -276,7 +666,7 @@
     <!-- CV -->
     <section id="cv" class="parallax-section">
         <div class="section-container reveal">
-            <div class="section-label">03 &mdash; <span data-i18n="nav.cv">Resume</span></div>
+            <div class="section-label">04 &mdash; <span data-i18n="nav.cv">Resume</span></div>
             <h2 class="section-title" data-i18n="cv.title">Education &amp; Skills</h2>
             <div class="cv-grid">
                 <div class="cv-column">
@@ -342,7 +732,7 @@
     <!-- Certifications -->
     <section id="certifications" class="parallax-section">
         <div class="section-container reveal">
-            <div class="section-label">04 &mdash; Certifications</div>
+            <div class="section-label">05 &mdash; Certifications</div>
             <h2 class="section-title" data-i18n="cert.title">Mes certifications</h2>
             <div class="certifications-grid">
 
@@ -401,7 +791,7 @@
     <!-- Contact -->
     <section id="contact" class="contact-section">
         <div class="section-container reveal">
-            <div class="section-label">05 &mdash; Contact</div>
+            <div class="section-label">06 &mdash; Contact</div>
             <h2 class="section-title" data-i18n="contact.title">Get in touch</h2>
             <a class="contact-email" href="mailto:alex@joveniaux.com">alex@joveniaux.com</a>
             <div class="contact-links">

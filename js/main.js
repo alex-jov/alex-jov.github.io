@@ -2,6 +2,7 @@ const translations = {
     en: {
         "nav.about": "About",
         "nav.portfolio": "Portfolio",
+        "nav.perso": "Personal projects",
         "nav.cv": "Resume",
         "hero.title": "Networks & Telecommunications",
         "hero.desc": "Passionate student in Networks & Telecommunications at IUT de Béthune. Networking, web development and cybersecurity.",
@@ -22,11 +23,48 @@ const translations = {
         "about.stat_proj": "Projects",
         "about.stat_eng": "English",
         "about.stat_cur": "Curiosity",
-        "portfolio.title": "My projects",
+        "portfolio.title": "Competencies & critical learnings",
+        "portfolio.intro": "Reflective approach to my learning within the Networks & Telecommunications BUT, structured along the three core competencies of the curriculum: Administer, Connect, Program. For each Level-1 Critical Learning (AC), I highlight the related projects and a personal feedback.",
         "filter.all": "All",
         "filter.admin": "Administer",
         "filter.connect": "Connect",
         "filter.program": "Program",
+        "comp.admin.tag": "Competency 1",
+        "comp.admin.title": "Administer networks and the Internet",
+        "comp.admin.subtitle": "Level 1 — Assist the network administrator",
+        "comp.connect.tag": "Competency 2",
+        "comp.connect.title": "Connect businesses and users",
+        "comp.connect.subtitle": "Level 1 — Discover transmissions and ToIP",
+        "comp.prog.tag": "Competency 3",
+        "comp.prog.title": "Create IT tools and applications for R&T",
+        "comp.prog.subtitle": "Level 1 — Integrate into an IT department",
+        "ac.projects_label": "Related projects / resources",
+        "reflect.what": "What I did",
+        "reflect.why": "Why I did it",
+        "reflect.how": "How I did it",
+        "reflect.diff": "My difficulties",
+        "reflect.learn": "What I learned",
+        "reflect.again": "What I would do differently",
+        "ac.1101.label": "Master the fundamental laws of electricity in order to work on networks and telecom equipment",
+        "ac.1102.label": "Understand the architecture and foundations of digital systems, information coding, communications and the Internet",
+        "ac.1103.label": "Configure the basic functions of the local network",
+        "ac.1104.label": "Master the roles and fundamental principles of operating systems to configure and administer networks and services",
+        "ac.1105.label": "Identify local network malfunctions and know how to report them",
+        "ac.1106.label": "Install a client workstation and explain the procedure",
+        "ac.1201.label": "Measure, analyse and comment on signals",
+        "ac.1202.label": "Characterize elementary transmission systems and discover the mathematical modelling of their operation",
+        "ac.1203.label": "Deploy transmission media",
+        "ac.1204.label": "Connect ToIP systems",
+        "ac.1205.label": "Communicate with a third party (client, colleague…) and adapt one's discourse and language to the interlocutor",
+        "ac.1301.label": "Use a computer system and its tools",
+        "ac.1302.label": "Read, run, fix and modify a program",
+        "ac.1303.label": "Translate an algorithm in a given language and environment",
+        "ac.1304.label": "Know the architecture and technologies of a website",
+        "ac.1305.label": "Choose data management mechanisms suited to the tool's development and justify those choices",
+        "ac.1306.label": "Integrate into an environment fostering development and collaborative work",
+        "perso.label": "Personal projects",
+        "perso.title": "Outside the BUT",
+        "perso.intro": "Projects I work on in my spare time to dive deeper into topics I'm passionate about: AI, algorithmics, 3D visualization and modern front-end development.",
         "proj.vlan.name": "VLAN Network Configuration",
         "proj.vlan.desc": "Setting up segmented networks with VLANs, multi-VLAN Trunk links and STP/RSTP protocol on Cisco equipment.",
         "proj.trans.name": "Transmission Systems",
@@ -143,6 +181,7 @@ const translations = {
     fr: {
         "nav.about": "\u00c0 propos",
         "nav.portfolio": "Portfolio",
+        "nav.perso": "Projets perso",
         "nav.cv": "CV",
         "hero.title": "R\u00e9seaux & T\u00e9l\u00e9communications",
         "hero.desc": "\u00c9tudiant passionn\u00e9 en BUT R&T \u00e0 l'IUT de B\u00e9thune. R\u00e9seaux, d\u00e9veloppement web et cybers\u00e9curit\u00e9.",
@@ -163,11 +202,48 @@ const translations = {
         "about.stat_proj": "Projets",
         "about.stat_eng": "Anglais",
         "about.stat_cur": "Curiosit\u00e9",
-        "portfolio.title": "Mes projets",
+        "portfolio.title": "Compétences & apprentissages critiques",
+        "portfolio.intro": "Démarche réflexive sur mes apprentissages au sein du BUT Réseaux & Télécommunications, structurée selon les trois compétences cœur du référentiel : Administrer, Connecter, Programmer. Pour chaque apprentissage critique (AC) de niveau 1, je mets en avant les projets associés et un retour d'expérience.",
         "filter.all": "Tout",
         "filter.admin": "Administrer",
         "filter.connect": "Connecter",
         "filter.program": "Programmer",
+        "comp.admin.tag": "Compétence 1",
+        "comp.admin.title": "Administrer les réseaux et l'Internet",
+        "comp.admin.subtitle": "Niveau 1 — Assister l'administrateur du réseau",
+        "comp.connect.tag": "Compétence 2",
+        "comp.connect.title": "Connecter les entreprises et les usagers",
+        "comp.connect.subtitle": "Niveau 1 — Découvrir les transmissions et la ToIP",
+        "comp.prog.tag": "Compétence 3",
+        "comp.prog.title": "Créer des outils et applications informatiques pour les R&T",
+        "comp.prog.subtitle": "Niveau 1 — S'intégrer dans un service informatique",
+        "ac.projects_label": "Projets / ressources associés",
+        "reflect.what": "Ce que j'ai fait",
+        "reflect.why": "Pourquoi je l'ai fait",
+        "reflect.how": "Comment je l'ai fait",
+        "reflect.diff": "Mes difficultés",
+        "reflect.learn": "Ce que j'en ai appris",
+        "reflect.again": "Ce que je ferais autrement",
+        "ac.1101.label": "Maîtriser les lois fondamentales de l'électricité afin d'intervenir sur des équipements de réseaux et télécommunications",
+        "ac.1102.label": "Comprendre l'architecture et les fondements des systèmes numériques, les principes du codage de l'information, des communications et de l'Internet",
+        "ac.1103.label": "Configurer les fonctions de base du réseau local",
+        "ac.1104.label": "Maîtriser les rôles et les principes fondamentaux des systèmes d'exploitation afin d'interagir avec ceux-ci pour la configuration et l'administration des réseaux et services fournis",
+        "ac.1105.label": "Identifier les dysfonctionnements du réseau local et savoir les signaler",
+        "ac.1106.label": "Installer un poste client, expliquer la procédure mise en place",
+        "ac.1201.label": "Mesurer, analyser et commenter les signaux",
+        "ac.1202.label": "Caractériser des systèmes de transmissions élémentaires et découvrir la modélisation mathématique de leur fonctionnement",
+        "ac.1203.label": "Déployer des supports de transmission",
+        "ac.1204.label": "Connecter les systèmes de ToIP",
+        "ac.1205.label": "Communiquer avec un tiers (client, collaborateur...) et adapter son discours et sa langue à son interlocuteur",
+        "ac.1301.label": "Utiliser un système informatique et ses outils",
+        "ac.1302.label": "Lire, exécuter, corriger et modifier un programme",
+        "ac.1303.label": "Traduire un algorithme, dans un langage et pour un environnement donné",
+        "ac.1304.label": "Connaître l'architecture et les technologies d'un site Web",
+        "ac.1305.label": "Choisir les mécanismes de gestion de données adaptés au développement de l'outil et argumenter ses choix",
+        "ac.1306.label": "S'intégrer dans un environnement propice au développement et au travail collaboratif",
+        "perso.label": "Projets personnels",
+        "perso.title": "En dehors du BUT",
+        "perso.intro": "Projets que je mène sur mon temps libre pour approfondir des sujets qui me passionnent : intelligence artificielle, algorithmique, visualisation 3D et développement front-end moderne.",
         "proj.vlan.name": "Configuration de R\u00e9seaux VLAN",
         "proj.vlan.desc": "Mise en place de r\u00e9seaux segment\u00e9s avec VLAN, liens Trunk multi-VLAN et protocole STP/RSTP sur \u00e9quipements Cisco.",
         "proj.trans.name": "Syst\u00e8mes de Transmission",
@@ -573,33 +649,23 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 
-const filterBtns = document.querySelectorAll('.portfolio-filters button');
-const projectCards = document.querySelectorAll('.project-card');
+function openModalById(modalId) {
+    if (!modalId) return;
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+}
 
-filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        projectCards.forEach(card => {
-            if (filter === 'all' || card.dataset.category === filter) {
-                card.classList.remove('hidden');
-            } else {
-                card.classList.add('hidden');
-            }
-        });
-    });
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', () => openModalById(card.dataset.modal));
 });
 
-
-projectCards.forEach(card => {
-    card.addEventListener('click', () => {
-        const modalId = card.dataset.modal;
-        const modal = document.getElementById(modalId);
-        if (modal) {
-            modal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
+document.querySelectorAll('.ac-chip[data-modal]').forEach(chip => {
+    chip.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openModalById(chip.dataset.modal);
     });
 });
 
