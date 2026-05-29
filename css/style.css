@@ -1182,6 +1182,42 @@ section.contact-section {
     background: rgba(0, 200, 255, 0.15);
 }
 
+.modal-proof {
+    display: grid;
+    gap: 1rem;
+    margin: 0.5rem 0 0.25rem;
+}
+
+.modal-proof figure {
+    margin: 0;
+}
+
+.modal-proof a {
+    display: block;
+}
+
+.modal-proof img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--surface);
+    transition: border-color 0.3s ease;
+}
+
+.modal-proof a:hover img {
+    border-color: var(--accent);
+}
+
+.modal-proof figcaption {
+    margin-top: 0.45rem;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--text-muted);
+}
+
 
 .contact-section {
     text-align: center;
@@ -1317,6 +1353,27 @@ footer p {
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--text-muted);
+}
+
+footer .footer-credits {
+    max-width: 720px;
+    margin: 0.8rem auto 0;
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+footer .footer-credits a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--border);
+}
+
+footer .footer-credits a:hover {
+    color: var(--accent);
 }
 
 
